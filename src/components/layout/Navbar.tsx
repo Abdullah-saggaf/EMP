@@ -1,0 +1,183 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
+import Button from "@/components/ui/Button";
+
+const navLinks = [
+  { key: "home", href: "/" as const },
+  { key: "about", href: "/about" as const },
+  { key: "properties", href: "/properties" as const },
+  { key: "services", href: "/services" as const },
+  { key: "courses", href: "/courses" as const },
+  { key: "contact", href: "/contact" as const },
+];
+
+export default function Navbar() {
+  const t = useTranslations("nav");
+  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  return (
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className={`fixed top-0 start-0 end-0 z-50 transition-all duration-500 ${
+          isScrolled ? "glass py-3" : "bg-transparent py-5"
+        }`}
+      >
+        <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-center gap-2 group"
+            id="navbar-logo"
+          >
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
+              <span className="font-heading font-bold text-charcoal-900 text-sm">
+                AE
+              </span>
+            </div>
+            <span className="font-heading text-lg font-bold tracking-wide">
+              <span className="text-cream-100">AMP</span>{" "}
+              <span className="text-gold-500">Empire</span>
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map(({ key, href }) => (
+              <Link
+                key={key}
+                href={href}
+                className={`relative px-4 py-2 text-sm font-heading font-medium transition-colors duration-300 group ${
+                  isActive(href)
+                    ? "text-gold-400"
+                    : "text-charcoal-300 hover:text-gold-400"
+                }`}
+                id={`nav-${key}`}
+              >
+                {t(key)}
+                <span
+                  className={`absolute bottom-0 start-1/2 -translate-x-1/2 h-0.5 bg-gold-500 rounded-full transition-all duration-300 ${
+                    isActive(href)
+                      ? "w-3/4"
+                      : "w-0 group-hover:w-3/4"
+                  }`}
+                />
+              </Link>
+            ))}
+          </div>
+
+          {/* Right: Language + CTA + Mobile Toggle */}
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+
+            <div className="hidden lg:block">
+              <Button href="/contact" size="sm">
+                {t("cta")}
+              </Button>
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 rounded-lg border border-charcoal-700/40 hover:border-gold-500/30 transition-all duration-300"
+              aria-label="Toggle menu"
+              id="mobile-menu-toggle"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5 text-gold-500" />
+              ) : (
+                <Menu className="w-5 h-5 text-cream-200" />
+              )}
+            </button>
+          </div>
+        </nav>
+      </motion.header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-charcoal-950/95 backdrop-blur-xl lg:hidden"
+          >
+            <div className="flex flex-col items-center justify-center min-h-screen gap-6 p-6">
+              {navLinks.map(({ key, href }, index) => (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <Link
+                    href={href}
+                    className={`text-2xl font-heading font-semibold transition-colors duration-300 ${
+                      isActive(href)
+                        ? "text-gold-400"
+                        : "text-cream-200 hover:text-gold-400"
+                    }`}
+                  >
+                    {t(key)}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: navLinks.length * 0.05 }}
+                className="mt-4"
+              >
+                <Link href="/contact">
+                  <Button size="lg">{t("cta")}</Button>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

@@ -1,0 +1,234 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Nasze usługi",
+    "properties": "Nieruchomości",
+    "courses": "Kursy",
+    "contact": "Kontakt",
+    "cta": "Zacznij z nami"
+  },
+  "hero": {
+    "tagline": "Globalne Doradztwo Inwestycyjne i Nieruchomości Premium",
+    "subheadline": "Realizuj z nami swoje cele",
+    "cta": "Zacznij z nami",
+    "scrollDown": "Przewiń w dół"
+  },
+  "about": {
+    "sectionLabel": "O nas",
+    "headline": "AMP Empire, Architekci Globalnych Korytarzy Kapitałowych",
+    "body": "Nasza historia rozpoczęła się w 2018 roku z jasno określonym celem: przenieść standardy obsługi nieruchomości na poziom nieosiągalny dla innych.",
+    "bodyExtended": "Łączymy kapitał z realnymi możliwościami inwestycyjnymi na rynkach Europy i Bliskiego Wschodu, tworząc wartość opartą na doświadczeniu, analizie i długofalowych relacjach.",
+    "history": "Idea AMP EMPIRE powstała z realnej potrzeby rynku. Inwestorzy coraz częściej poszukiwali bezpiecznych i przemyślanych możliwości lokowania kapitału poza granicami własnych krajów, jednak brakowało im rzetelnego partnera, który potrafiłby połączyć wiedzę lokalną z globalnym spojrzeniem.",
+    "historyDetail": "Rozpoczęliśmy działalność w Polsce, stopniowo budując profesjonalną sieć relacji w Hiszpanii, na Cyprze, w Zjednoczonych Emiratach Arabskich oraz Arabii Saudyjskiej. Od początku naszym celem nie była zwykła pośrednictwo, lecz tworzenie spójnego systemu doradztwa inwestycyjnego, opartego na analizie, transparentności i długoterminowej wartości.",
+    "vision": "Naszą wizją jest stworzenie globalnej platformy inwestycyjnej, która łączy europejską precyzję operacyjną z głębokim zrozumieniem rynków Bliskiego Wschodu.",
+    "visionValues": "Działamy w oparciu o jasne zasady: transparentność w każdym procesie, selekcję projektów przed ich prezentacją, odpowiedzialność za kapitał klientów jak za własny, budowę relacji zamiast jednorazowych transakcji, strategiczne myślenie długoterminowe.",
+    "howWeWork": "Każdy proces w AMP EMPIRE rozpoczyna się od zrozumienia celów inwestora. Następnie analizujemy rynki, dobieramy odpowiednie struktury i selekcjonujemy projekty spełniające określone kryteria rentowności i bezpieczeństwa.",
+    "markets": "Koncentrujemy działalność na dynamicznych i perspektywicznych regionach świata. Aktualnie AMP EMPIRE operuje na rynkach Polski, Hiszpanii, Cypru, Zjednoczonych Emiratów Arabskich oraz Arabii Saudyjskiej.",
+    "partners": "Współpracujemy z inwestorami indywidualnymi, firmami oraz grupami kapitałowymi, które poszukują międzynarodowych możliwości rozwoju. Nasze podejście opiera się na dialogu, precyzyjnej analizie oraz wspólnym budowaniu wartości.",
+    "partnersLabel": "Partnerzy",
+    "jobsLabel": "Realizacje",
+    "coursesLabel": "Kursy",
+    "clientsLabel": "Klienci",
+    "learnMore": "Więcej"
+  },
+  "properties": {
+    "sectionLabel": "Nieruchomości Premium",
+    "headline": "Ekskluzywne Portfolio Nieruchomości",
+    "subtitle": "Odkryj starannie wyselekcjonowane możliwości inwestycyjne na globalnych rynkach",
+    "viewDetails": "Zobacz szczegóły",
+    "bed": "Syp.",
+    "bath": "Łaz.",
+    "sqm": "m²",
+    "price": "Cena",
+    "type": "Typ",
+    "city": "Miasto",
+    "noProperties": "Nieruchomości są w trakcie przygotowywania. Wróć wkrótce po ekskluzywne oferty.",
+    "comingSoon": "Wkrótce"
+  },
+  "services": {
+    "sectionLabel": "Nasze usługi",
+    "headline": "Nasze Usługi",
+    "subtitle": "Kompleksowe rozwiązania dla wymagających inwestorów i właścicieli nieruchomości",
+    "items": {
+      "s1": {
+        "title": "Doradztwo przy szybkiej realizacji transakcji",
+        "description": "Eksperckie wsparcie przyspieszające transakcje nieruchomościowe z precyzją i efektywnością."
+      },
+      "s2": {
+        "title": "Przeprowadzenie dokładnej weryfikacji",
+        "description": "Kompleksowa analiza due diligence zapewniająca najwyższe standardy kontroli każdej inwestycji."
+      },
+      "s3": {
+        "title": "Gwarancja wsparcia przy realizacji transakcji",
+        "description": "Pełne wsparcie na każdym etapie transakcji, od pierwszej oferty po finalizację."
+      },
+      "s4": {
+        "title": "Dostęp dla zapisanych u nas Klientów ofert off market",
+        "description": "Ekskluzywny dostęp do nieruchomości premium poza rynkiem, zarezerwowany dla naszych zarejestrowanych klientów."
+      },
+      "s5": {
+        "title": "Skuteczne wsparcie przy promocji sprzedaży nieruchomości",
+        "description": "Strategiczny marketing i promocja w celu maksymalizacji ekspozycji i wartości Twojej nieruchomości."
+      },
+      "s6": {
+        "title": "Zapewnienie dodatkowej ochrony i poufności Klientom",
+        "description": "Wzmocnione środki ochrony prywatności i protokoły poufności dla transakcji na najwyższym poziomie."
+      },
+      "s7": {
+        "title": "Doskonała znajomość możliwości na rynkach inwestycyjnych",
+        "description": "Głęboka znajomość rynku i analiza korytarzy inwestycyjnych w Europie i na Bliskim Wschodzie."
+      },
+      "s8": {
+        "title": "Doradztwo nieruchomościowe i inwestycyjne",
+        "description": "Holistyczne usługi doradcze łączące ekspertyzę nieruchomościową z szerszą strategią inwestycyjną."
+      }
+    }
+  },
+  "courses": {
+    "sectionLabel": "Szkolenia",
+    "headline": "Organizujemy szkolenia",
+    "subtitle": "Dla nowych i chcących podnosić swoje kompetencje doradców, których celem jest sukces w sprzedaży i branży nieruchomości.",
+    "topics": {
+      "sales": "Sprzedaż",
+      "negotiations": "Negocjacje",
+      "coldCalling": "Cold Calling",
+      "objections": "Obiekcje",
+      "closingSales": "Zamknięcie sprzedaży"
+    },
+    "cta": "Szczegóły kursu",
+    "masterClass": "Kurs Mistrza Sprzedaży",
+    "masterClassSub": "Twój Przewodnik w świecie nieruchomości i sprzedaży",
+    "duration": "Czas trwania: 14 dni intensywnego szkolenia (3-4 godziny dziennie + coaching po kursie)",
+    "format": "Forma szkolenia: Online + spotkania na żywo (stacjonarnie i zdalnie)",
+    "languages": "Dostępne języki: polski / angielski",
+    "startDate": "Termin rozpoczęcia: do ustalenia",
+    "basePrice": "Cena podstawowa: 2 470 PLN",
+    "subscriberPrice": "Dla subskrybentów newslettera: 2 370 PLN",
+    "coaching": "Indywidualny coaching po kursie (opcjonalny): +490 PLN",
+    "installments": "Możliwość płatności w ratach"
+  },
+  "testimonials": {
+    "sectionLabel": "Opinie",
+    "headline": "Opinie naszych Klientów",
+    "subtitle": "Zaufanie inwestorów i profesjonalistów na całym świecie",
+    "items": {
+      "t1": {
+        "name": "Katarzyna M.",
+        "location": "Warszawa, Polska",
+        "text": "Ten kurs to prawdziwy game changer! Praktyczne podejście, mnóstwo przykładów z życia wziętych i świetna energia instruktorów. Dzięki niemu naprawdę rozwinęłam skrzydła w sprzedaży."
+      },
+      "t2": {
+        "name": "Thomas L.",
+        "location": "Berlin, Niemcy",
+        "text": "Fantastyczne szkolenie! Koncepcje nieruchomości zostały wyjaśnione jasno i profesjonalnie. Zdobyłem narzędzia, których potrzebowałem, aby rozwijać swoją sieć i zamykać transakcje."
+      },
+      "t3": {
+        "name": "Ahmad H.",
+        "location": "Dubaj, ZEA",
+        "text": "Kurs dał mi nową perspektywę na sprzedaż nieruchomości premium. Jest dostosowany nie tylko dla początkujących, ale także dla profesjonalistów, którzy chcą się rozwijać. Obowiązkowa pozycja dla dynamicznego rynku w Dubaju!"
+      },
+      "t4": {
+        "name": "Marek W.",
+        "location": "Kraków, Polska",
+        "text": "Szkolenie przeprowadzone na najwyższym poziomie. Czułem, że jestem w dobrych rękach. Już po kilku tygodniach odniosłem pierwsze sukcesy zawodowe."
+      },
+      "t5": {
+        "name": "Elena R.",
+        "location": "Barcelona, Hiszpania",
+        "text": "Bardzo konkretni, obiektywni i pełni pasji. Nauczyli mnie, jak rozmawiać z klientem, jak negocjować i jak zamknąć sprzedaż."
+      },
+      "t6": {
+        "name": "Piotr K.",
+        "location": "Gdańsk, Polska",
+        "text": "Najlepsza inwestycja w siebie w tym roku. Trenerzy dzielili się doświadczeniem z prawdziwego świata, które mogłem od razu zastosować."
+      },
+      "t7": {
+        "name": "Jakub S.",
+        "location": "Poznań, Polska",
+        "text": "Kurs dał mi nie tylko wiedzę, ale i pewność siebie. Zacząłem pracować jako pośrednik i już mam pierwsze kontrakty!"
+      },
+      "t8": {
+        "name": "Anna B.",
+        "location": "Wrocław, Polska",
+        "text": "Bardzo dobrze przygotowani instruktorzy i przydatne materiały. Polecam każdemu, kto chce poważnie podejść do nieruchomości."
+      },
+      "t9": {
+        "name": "Michał D.",
+        "location": "Łódź, Polska",
+        "text": "Nie sądziłem, że można zdobyć tak dużo konkretnej wiedzy w tak krótkim czasie. Po kursie udało mi się zamknąć pierwszą sprzedaż!"
+      },
+      "t10": {
+        "name": "Omar F.",
+        "location": "Rijad, Arabia Saudyjska",
+        "text": "Ten kurs pomógł mi zrozumieć międzynarodowe rynki nieruchomości i jak negocjować z klientami z wyższej półki. Instruktorzy byli wybitni – kompetentni i pomocni przez cały czas."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Kontakt",
+    "headline": "Realizuj z nami swoje cele",
+    "subtitle": "Zapraszamy do wysłania zapytań i kontaktu z nami",
+    "email": "office@empireamp.com",
+    "phone": "+48 729 225 353",
+    "nip": "NIP: 954 128 36 69",
+    "location": "Polska",
+    "getInTouch": "Skontaktuj się",
+    "haveQuestion": "Masz pytanie?",
+    "contactUs": "Napisz do nas"
+  },
+  "footer": {
+    "description": "Globalne Doradztwo Inwestycyjne i Nieruchomości Premium. Łączymy kapitał z realnymi możliwościami inwestycyjnymi na rynkach Europy i Bliskiego Wschodu.",
+    "quickLinks": "Ważne linki",
+    "courses": "Kursy",
+    "coursesLink": "Kurs Promotora Sprzedaży",
+    "contactInfo": "Kontakt",
+    "copyright": "Wszelkie prawa zastrzeżone © AMPEMPIRE 2026",
+    "allRightsReserved": "Wszelkie prawa zastrzeżone",
+    "privacyPolicy": "Polityka Prywatności"
+  },
+  "homePreview": {
+    "sectionLabel": "Odkryj",
+    "headline": "Poznaj Naszą Ofertę",
+    "subtitle": "Wszystko, czego potrzebujesz do odniesienia sukcesu na globalnych rynkach nieruchomości.",
+    "cards": {
+      "about": {
+        "title": "O nas",
+        "description": "Poznaj naszą wizję i historię na globalnych rynkach kapitałowych.",
+        "cta": "Dowiedz się więcej"
+      },
+      "properties": {
+        "title": "Nieruchomości",
+        "description": "Ekskluzywne portfolio nieruchomości na rynkach całego świata.",
+        "cta": "Zobacz nieruchomości"
+      },
+      "services": {
+        "title": "Usługi",
+        "description": "Kompleksowe doradztwo dla inwestorów i właścicieli.",
+        "cta": "Nasze usługi"
+      },
+      "courses": {
+        "title": "Kursy",
+        "description": "Intensywne szkolenia ze sprzedaży nieruchomości i sztuki negocjacji.",
+        "cta": "Zobacz kursy"
+      }
+    }
+  },
+  "propertyDetails": {
+    "back": "Powrót",
+    "overview": "Przegląd",
+    "features": "Funkcje i Udogodnienia",
+    "location": "Lokalizacja",
+    "contactAgent": "Poproś o informacje",
+    "specs": {
+      "price": "Cena",
+      "size": "Powierzchnia",
+      "bedrooms": "Sypialnie",
+      "bathrooms": "Łazienki",
+      "year": "Rok budowy",
+      "type": "Typ",
+      "floor": "Piętro"
+    },
+    "notFound": "Nie znaleziono nieruchomości."
+  }
+}

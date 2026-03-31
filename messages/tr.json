@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "properties": "Emlak",
+    "courses": "Kurslar",
+    "contact": "İLETİŞİM",
+    "cta": "Bizimle başlayın"
+  },
+  "hero": {
+    "tagline": "Küresel Sermaye Koridorlarının Mimarları",
+    "subheadline": "Uluslararası sermayeyi seçkin gayrimenkul ve uzmanlıkla buluşturuyoruz.",
+    "cta": "Bizimle başlayın",
+    "scrollDown": "Aşağı kaydır"
+  },
+  "about": {
+    "sectionLabel": "Kurumsal Temel",
+    "headline": "AMP Empire, Küresel Sermaye Koridorlarının Mimarları",
+    "body": "2018 yılında kurulan misyonumuz, gayrimenkul hizmet standartlarını başkaları için ulaşılamaz bir seviyeye yükseltmektir.",
+    "bodyExtended": "Uluslararası sermaye ile seçkin gayrimenkul arasındaki boşluğu dolduruyor, uzman danışmanlık ve yönetim hizmetleri sunuyoruz.",
+    "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA), merkezi Varşova, Polonya'da bulunan tescilli bir kurumsal merkezdir.",
+    "partnersLabel": "Ortaklar",
+    "jobsLabel": "İşler",
+    "coursesLabel": "Kurslar",
+    "clientsLabel": "Müşteriler",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "services": {
+    "sectionLabel": "Profesyonel Sektörler",
+    "headline": "Hizmet Sütunları",
+    "subtitle": "Üç farklı profesyonel sektör aracılığıyla uluslararası sermayeyi birleştiriyoruz.",
+    "realEstate": {
+      "title": "Gayrimenkul ve Mülk Yönetimi",
+      "p1": "Emlak Aracılığı: Konut ve ticari varlıklar için lisanslı aracılık.",
+      "p2": "Mülk Yönetimi: Sahipler adına kapsamlı yönetim."
+    },
+    "consulting": {
+      "title": "Stratejik Uzmanlık ve Danışmanlık",
+      "p1": "İş Danışmanlığı: İş operasyonları ve optimizasyon hakkında stratejik tavsiyeler.",
+      "p2": "Sermaye Koridorları: Uluslararası sermaye hareketi için stratejik planlama."
+    },
+    "hospitality": {
+      "title": "Ağırlama ve Yaşam Tarzı Varlıkları",
+      "p1": "Restoran Operasyonları: Gastronomi varlıkları için yönetim ve danışmanlık.",
+      "p2": "Konaklama Hizmetleri: Kısa süreli konaklamaların ve lojman tesislerinin yönetimi."
+    }
+  },
+  "courses": {
+    "sectionLabel": "Eğitim Akademisi",
+    "headline": "Uzman Eğitim Modülleri",
+    "subtitle": "Seçkin gayrimenkul pazarına giren profesyoneller için yüksek performanslı eğitim.",
+    "modules": {
+      "sales": {
+        "title": "SATIŞ",
+        "description": "Temel ve ileri düzey gayrimenkul satış stratejileri."
+      },
+      "negotiations": {
+        "title": "MÜZAKERE",
+        "description": "Yüksek değerli anlaşmaları kapatma ustalığı."
+      },
+      "coldCalling": {
+        "title": "SOĞUK ARAMA",
+        "description": "Profesyonel potansiyel müşteri oluşturma."
+      },
+      "objections": {
+        "title": "İTİRAZLAR",
+        "description": "Müşteri direnciyle başa çıkmak için ileri düzey stratejiler."
+      }
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Uluslararası Başarı Sinyalleri",
+    "headline": "Küresel Başarı Hikayeleri",
+    "items": {
+      "t1": {
+        "name": "Piotr D.",
+        "location": "Dubai, BAE",
+        "text": "Kurs, seçkin gayrimenkul profesyonelleri için 'olmazsa olmaz' niteliğindedir."
+      },
+      "t2": {
+        "name": "Faisal A.",
+        "location": "Riyad, Suudi Arabistan",
+        "text": "Müzakere modülünü tamamladıktan hemen sonra ilk satışını gerçekleştirdi."
+      },
+      "t3": {
+        "name": "Sarah N.",
+        "location": "Dublin, İrlanda",
+        "text": "Eğitmenlerin tutkusunu ve uzman müzakere eğitimini övdü."
+      },
+      "t4": {
+        "name": "Natalia K.",
+        "location": "Toronto, Kanada",
+        "text": "İlk kontratlarla bir broker olarak başlama güvenini kazandı."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "İletişim",
+    "headline": "Varşova Genel Merkezi ile İletişime Geçin",
+    "subtitle": "Profesyonel şeffaflık ve mevzuata uygunluk.",
+    "legalName": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+    "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Polonya",
+    "email": "office@empireamp.com",
+    "phone": "+48 729 225 353",
+    "nip": "9541283669",
+    "regon": "273474870",
+    "foundingDate": "2018"
+  },
+  "footer": {
+    "description": "Küresel Sermaye Koridorlarının Mimarları. Yüksek otoriteli danışmanlık merkezi.",
+    "legalInfo": "Yasal Kayıt Verileri",
+    "copyright": "© 2018 - 2026 AMP EMPIRE",
+    "allRightsReserved": "Tüm hakları saklıdır"
+  },
+  "propertyDetails": {
+    "back": "Listeye dön",
+    "specs": {
+      "price": "Fiyat",
+      "size": "Alan",
+      "bedrooms": "Yatak Odası",
+      "bathrooms": "Banyo",
+      "year": "Yıl",
+      "type": "Tür"
+    }
+  }
+}

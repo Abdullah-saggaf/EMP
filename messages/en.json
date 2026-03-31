@@ -9,226 +9,119 @@
     "cta": "Start with us"
   },
   "hero": {
-    "tagline": "Global Investment Advisory and Premium Real Estate",
-    "subheadline": "Achieve Your Goals With Us",
+    "tagline": "Architects of Global Capital Corridors",
+    "subheadline": "Connecting international capital with premium real estate and expertise.",
     "cta": "Start with us",
     "scrollDown": "Scroll Down"
   },
   "about": {
-    "sectionLabel": "About Us",
+    "sectionLabel": "Institutional Foundation",
     "headline": "AMP Empire, Architects of Global Capital Corridors",
-    "body": "Our story began in 2018 with a clear goal: to elevate real estate service standards to an unreachable level for others.",
-    "bodyExtended": "We connect capital with real investment opportunities in European and Middle Eastern markets, creating value based on experience, analysis, and long-term relationships.",
-    "history": "The idea of AMP EMPIRE emerged from a real market need. Investors were increasingly seeking safe and well-thought-out opportunities to invest capital beyond their own borders, yet they lacked a reliable partner who could combine local knowledge with a global perspective.",
-    "historyDetail": "We started operations in Poland, gradually building a professional network of relationships in Spain, Cyprus, the United Arab Emirates, and Saudi Arabia. From the very beginning, our goal was not mere brokerage, but creating a coherent investment advisory system based on analysis, transparency, and long-term value.",
-    "vision": "Our vision is to create a global investment platform that combines European operational precision with a deep understanding of Middle Eastern markets.",
-    "visionValues": "We operate based on clear principles: transparency in every process, project selection before presentation, responsibility for clients' capital as our own, building relationships instead of one-time transactions, and long-term strategic thinking.",
-    "howWeWork": "Every process at AMP EMPIRE begins with understanding the investor's goals. We then analyze markets, select appropriate structures, and curate projects meeting specific profitability and security criteria.",
-    "markets": "We focus our operations on dynamic and promising regions of the world. Currently AMP EMPIRE operates in the markets of Poland, Spain, Cyprus, the United Arab Emirates, and Saudi Arabia.",
-    "partners": "We work with individual investors, companies, and capital groups looking for international development opportunities. Our approach is based on dialogue, precise analysis, and building value together.",
+    "body": "Founded in 2018, our mission is to elevate real estate service standards to an unreachable level.",
+    "bodyExtended": "We bridge the gap between international capital and premium real estate, providing expert advisory and management services.",
+    "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) is a registered institutional hub based in Warsaw, Poland.",
     "partnersLabel": "Partners",
     "jobsLabel": "Jobs",
     "coursesLabel": "Courses",
     "clientsLabel": "Clients",
     "learnMore": "Learn More"
   },
-  "properties": {
-    "sectionLabel": "Premium Properties",
-    "headline": "Exclusive Real Estate Portfolio",
-    "subtitle": "Discover handpicked investment opportunities across global markets",
-    "viewDetails": "View Details",
-    "bed": "Bed",
-    "bath": "Bath",
-    "sqm": "m²",
-    "price": "Price",
-    "type": "Type",
-    "city": "City",
-    "noProperties": "Properties are being curated. Check back soon for exclusive listings.",
-    "comingSoon": "Coming Soon"
-  },
   "services": {
-    "sectionLabel": "Our Services",
-    "headline": "Our Services",
-    "subtitle": "Comprehensive solutions for discerning investors and property owners",
-    "items": {
-      "s1": {
-        "title": "Advisory for Fast Transaction Execution",
-        "description": "Expert guidance to accelerate your real estate transactions with precision and efficiency."
-      },
-      "s2": {
-        "title": "Thorough Verification Process",
-        "description": "Comprehensive due diligence ensuring every investment meets the highest standards of scrutiny."
-      },
-      "s3": {
-        "title": "Transaction Support Guarantee",
-        "description": "End-to-end support throughout the entire transaction lifecycle, from initial offer to closing."
-      },
-      "s4": {
-        "title": "Off-Market Access for Registered Clients",
-        "description": "Exclusive access to premium off-market properties reserved for our registered clientele."
-      },
-      "s5": {
-        "title": "Effective Property Sales Promotion",
-        "description": "Strategic marketing and promotion services to maximize your property's market exposure and value."
-      },
-      "s6": {
-        "title": "Additional Protection & Client Confidentiality",
-        "description": "Enhanced privacy measures and confidentiality protocols for high-profile transactions."
-      },
-      "s7": {
-        "title": "Expert Knowledge of Investment Markets",
-        "description": "Deep market intelligence and insights across European and Middle Eastern investment corridors."
-      },
-      "s8": {
-        "title": "Real Estate & Investment Advisory",
-        "description": "Holistic advisory services combining real estate expertise with broader investment strategy."
-      }
+    "sectionLabel": "Professional Sectors",
+    "headline": "Service Pillars",
+    "subtitle": "Bridging international capital through three distinct professional sectors.",
+    "realEstate": {
+      "title": "Real Estate & Property Management",
+      "p1": "Property Brokerage: Licensed intermediation for residential and commercial assets.",
+      "p2": "Property Management: Comprehensive management on behalf of owners."
+    },
+    "consulting": {
+      "title": "Strategic Advisory & Consulting",
+      "p1": "Business Consultancy: Strategic advice on business operations and optimization.",
+      "p2": "Capital Corridors: Strategic planning for international capital movement."
+    },
+    "hospitality": {
+      "title": "Hospitality & Lifestyle Assets",
+      "p1": "Restaurant Operations: Management and consulting for gastronomy assets.",
+      "p2": "Accommodation Services: Management of short-term stays and lodging facilities."
     }
   },
   "courses": {
-    "sectionLabel": "Training",
-    "headline": "We organize training",
-    "subtitle": "For new advisors and those wanting to improve their skills aimed at success in sales and real estate.",
-    "topics": {
-      "sales": "Sales",
-      "negotiations": "Negotiations",
-      "coldCalling": "Cold Calling",
-      "objections": "Objections",
-      "closingSales": "Closing Sales"
-    },
-    "cta": "Course details",
-    "masterClass": "Sales Master Course",
-    "masterClassSub": "Your Guide in the World of Real Estate and Sales",
-    "duration": "Duration: 14 days of intensive training (3-4 hours daily + post-course coaching)",
-    "format": "Training format: Online + live meetings (in-person and remote)",
-    "languages": "Available languages: Polish / English",
-    "startDate": "Start date: to be determined",
-    "basePrice": "Base price: 2,470 PLN",
-    "subscriberPrice": "For newsletter subscribers: 2,370 PLN",
-    "coaching": "Individual post-course coaching (optional): +490 PLN",
-    "installments": "Installment payment available"
+    "sectionLabel": "Educational Academy",
+    "headline": "Expert Training Modules",
+    "subtitle": "High-performance training for professionals in the premium real estate market.",
+    "modules": {
+      "sales": {
+        "title": "SALES",
+        "description": "Foundational and advanced property sales strategies."
+      },
+      "negotiations": {
+        "title": "NEGOTIATIONS",
+        "description": "Mastery of closing high-value deals."
+      },
+      "coldCalling": {
+        "title": "COLD CALLING",
+        "description": "Professional lead generation."
+      },
+      "objections": {
+        "title": "OBJECTIONS",
+        "description": "Advanced strategies for handling client resistance."
+      }
+    }
   },
   "testimonials": {
-    "sectionLabel": "Testimonials",
-    "headline": "What Our Clients Say",
-    "subtitle": "Trusted by investors and professionals worldwide",
+    "sectionLabel": "International Success Signals",
+    "headline": "Global Testimonials",
     "items": {
       "t1": {
-        "name": "Katarzyna M.",
-        "location": "Warsaw, Poland",
-        "text": "This course is a real game changer! Practical approach, plenty of real-life examples, and great instructor energy. Thanks to it, I truly spread my wings in sales."
+        "name": "Piotr D.",
+        "location": "Dubai, UAE",
+        "text": "The course is a 'must-have' for premium real estate professionals."
       },
       "t2": {
-        "name": "Thomas L.",
-        "location": "Berlin, Germany",
-        "text": "Fantastic training! Real estate concepts were explained clearly and professionally. I gained the tools I needed to grow my network and close deals."
+        "name": "Faisal A.",
+        "location": "Riyadh, Saudi Arabia",
+        "text": "Closed my first sale immediately after completing the negotiations module."
       },
       "t3": {
-        "name": "Ahmad H.",
-        "location": "Dubai, UAE",
-        "text": "The course gave me a new perspective on premium real estate sales. It's tailored not only for beginners but also for professionals who want to grow. A must for the dynamic Dubai market!"
+        "name": "Sarah N.",
+        "location": "Dublin, Ireland",
+        "text": "Praised the instructors' passion and expert negotiation training."
       },
       "t4": {
-        "name": "Marek W.",
-        "location": "Kraków, Poland",
-        "text": "Training conducted at the highest level. I felt I was in good hands. After just a few weeks, I achieved my first professional successes."
-      },
-      "t5": {
-        "name": "Elena R.",
-        "location": "Barcelona, Spain",
-        "text": "Very specific, objective, and full of passion. They taught me how to talk to clients, how to negotiate, and how to close a sale."
-      },
-      "t6": {
-        "name": "Piotr K.",
-        "location": "Gdańsk, Poland",
-        "text": "Best investment in myself this year. Trainers shared real-world experience that I could apply immediately."
-      },
-      "t7": {
-        "name": "Jakub S.",
-        "location": "Poznań, Poland",
-        "text": "The course gave me not only knowledge but also confidence. I started working as a broker and already have my first contracts!"
-      },
-      "t8": {
-        "name": "Anna B.",
-        "location": "Wrocław, Poland",
-        "text": "Very well-prepared instructors and useful materials. I recommend it to anyone who wants to seriously approach real estate."
-      },
-      "t9": {
-        "name": "Michał D.",
-        "location": "Łódź, Poland",
-        "text": "I didn't think you could gain so much specific knowledge in such a short time. After the course, I managed to close my first sale!"
-      },
-      "t10": {
-        "name": "Omar F.",
-        "location": "Riyadh, Saudi Arabia",
-        "text": "This course helped me understand international real estate markets and how to negotiate with premium clients. The instructors were outstanding — competent and helpful throughout."
+        "name": "Natalia K.",
+        "location": "Toronto, Canada",
+        "text": "Gained the confidence to start as a broker with early contracts."
       }
     }
   },
   "contact": {
     "sectionLabel": "Contact",
-    "headline": "Achieve Your Goals With Us",
-    "subtitle": "We invite you to send inquiries and contact us",
+    "headline": "Connect with Warsaw HQ",
+    "subtitle": "Professional transparency and regulatory compliance.",
+    "legalName": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+    "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Poland",
     "email": "office@empireamp.com",
     "phone": "+48 729 225 353",
-    "nip": "NIP: 954 128 36 69",
-    "location": "Poland",
-    "getInTouch": "Get in Touch",
-    "haveQuestion": "Have a question?",
-    "contactUs": "Contact Us"
+    "nip": "9541283669",
+    "regon": "273474870",
+    "foundingDate": "2018"
   },
   "footer": {
-    "description": "Global Investment Advisory and Premium Real Estate. Connecting capital with real investment opportunities across Europe and the Middle East.",
-    "quickLinks": "Quick Links",
-    "courses": "Courses",
-    "coursesLink": "Sales Promoter Course",
-    "contactInfo": "Contact",
-    "copyright": "Copyright © AMPEMPIRE 2026",
-    "allRightsReserved": "All rights reserved",
-    "privacyPolicy": "Privacy Policy"
-  },
-  "homePreview": {
-    "sectionLabel": "Explore",
-    "headline": "Discover Our Offerings",
-    "subtitle": "Everything you need to succeed in global real estate markets.",
-    "cards": {
-      "about": {
-        "title": "About Us",
-        "description": "Learn about our vision and history in global capital markets.",
-        "cta": "Read More"
-      },
-      "properties": {
-        "title": "Properties",
-        "description": "Exclusive real estate portfolio across global markets.",
-        "cta": "View Properties"
-      },
-      "services": {
-        "title": "Services",
-        "description": "Comprehensive solutions for investors and property owners.",
-        "cta": "Our Services"
-      },
-      "courses": {
-        "title": "Courses",
-        "description": "Intensive training for real estate sales and negotiations.",
-        "cta": "View Courses"
-      }
-    }
+    "description": "Architects of Global Capital Corridors. High-authority advisory hub.",
+    "legalInfo": "Legal Registry Data",
+    "copyright": "© 2018 - 2026 AMP EMPIRE",
+    "allRightsReserved": "All rights reserved"
   },
   "propertyDetails": {
     "back": "Back to listing",
-    "overview": "Overview",
-    "features": "Features & Amenities",
-    "location": "Location Details",
-    "contactAgent": "Request Information",
     "specs": {
       "price": "Price",
-      "size": "Total Area",
+      "size": "Area",
       "bedrooms": "Bedrooms",
       "bathrooms": "Bathrooms",
-      "year": "Construction Year",
-      "type": "Property Type",
-      "floor": "Floor"
-    },
-    "notFound": "Property not found."
+      "year": "Year",
+      "type": "Type"
+    }
   }
 }

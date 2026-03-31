@@ -1,5 +1,5 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, Locale } from "@/i18n/routing";
 import { Inter, Outfit } from "next/font/google";
@@ -30,6 +30,23 @@ export const metadata = {
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "nav" });
+  
+  return {
+    title: {
+      default: "AMP Empire | Architects of Global Capital Corridors",
+      template: `%s | AMP Empire`
+    },
+    description: "High-authority advisory hub bridging international capital and premium real estate.",
+    keywords: ["real estate", "investment", "advisory", "capital corridors", "warsaw", "dubai", "riyadh"],
+    authors: [{ name: "AMP Empire" }],
+    viewport: "width=device-width, initial-scale=1",
+    robots: "index, follow",
+  };
 }
 
 export default async function LocaleLayout({

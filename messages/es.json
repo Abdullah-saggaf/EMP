@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "services": "Nuestros servicios",
+    "properties": "Propiedades",
+    "courses": "Cursos",
+    "contact": "CONTACTO",
+    "cta": "Empieza con nosotros"
+  },
+  "hero": {
+    "tagline": "Arquitectos de corredores de capital global",
+    "subheadline": "Conectando capital internacional con bienes raíces premium y experiencia.",
+    "cta": "Empieza con nosotros",
+    "scrollDown": "Deslizar hacia abajo"
+  },
+  "about": {
+    "sectionLabel": "Cimentación Institucional",
+    "headline": "AMP Empire, Arquitectos de corredores de capital global",
+    "body": "Fundada en 2018, nuestra misión es elevar los estándares de servicio en bienes raíces a un nivel inalcanzable para otros.",
+    "bodyExtended": "Cerramos la brecha entre el capital internacional y las propiedades premium, brindando asesoría y servicios de gestión expertos.",
+    "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) es un centro institucional registrado con sede en Varsovia, Polonia.",
+    "partnersLabel": "Socios",
+    "jobsLabel": "Empleos",
+    "coursesLabel": "Cursos",
+    "clientsLabel": "Clientes",
+    "learnMore": "Saber más"
+  },
+  "services": {
+    "sectionLabel": "Sectores Profesionales",
+    "headline": "Pilares de Servicio",
+    "subtitle": "Uniendo capital internacional a través de tres sectores profesionales distintos.",
+    "realEstate": {
+      "title": "Bienes raíces y gestión de propiedades",
+      "p1": "Corretaje inmobiliario: Intermediación licenciada para activos residenciales y comerciales.",
+      "p2": "Gestión de propiedades: Gestión integral en nombre de los propietarios."
+    },
+    "consulting": {
+      "title": "Asesoría Estratégica y Consultoría",
+      "p1": "Consultoría empresarial: Asesoramiento estratégico sobre operaciones comerciales y optimización.",
+      "p2": "Corredores de Capital: Planificación estratégica para el movimiento internacional de capital."
+    },
+    "hospitality": {
+      "title": "Hostelería y Activos de Estilo de Vida",
+      "p1": "Operaciones de restaurantes: Gestión y consultoría para activos de gastronomía.",
+      "p2": "Servicios de alojamiento: Gestión de estancias de corta duración e instalaciones de hospedaje."
+    }
+  },
+  "courses": {
+    "sectionLabel": "Academia Educativa",
+    "headline": "Módulos de entrenamiento experto",
+    "subtitle": "Entrenamiento de alto rendimiento para profesionales en el mercado de bienes raíces premium.",
+    "modules": {
+      "sales": {
+        "title": "VENTAS",
+        "description": "Estrategias de ventas inmobiliarias fundamentales y avanzadas."
+      },
+      "negotiations": {
+        "title": "NEGOCIACIONES",
+        "description": "Maestría en el cierre de tratos de alto valor."
+      },
+      "coldCalling": {
+        "title": "LLAMADA EN FRÍO",
+        "description": "Generación profesional de prospectos."
+      },
+      "objections": {
+        "title": "OBJECIONES",
+        "description": "Estrategias avanzadas para manejar la resistencia del cliente."
+      }
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Señales de Éxito Internacional",
+    "headline": "Testimonios Globales",
+    "items": {
+      "t1": {
+        "name": "Piotr D.",
+        "location": "Dubái, EAU",
+        "text": "El curso es 'imprescindible' para los profesionales de bienes raíces premium."
+      },
+      "t2": {
+        "name": "Faisal A.",
+        "location": "Riad, Arabia Saudita",
+        "text": "Cerró mi primera venta inmediatamente después de completar el módulo de negociaciones."
+      },
+      "t3": {
+        "name": "Sarah N.",
+        "location": "Dublín, Irlanda",
+        "text": "Elogió la pasión de los instructores y el entrenamiento experto en negociaciones."
+      },
+      "t4": {
+        "name": "Natalia K.",
+        "location": "Toronto, Canadá",
+        "text": "Ganó la confianza para comenzar como corredora con los primeros contratos."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Contacto",
+    "headline": "Conecta con el CG de Varsovia",
+    "subtitle": "Transparencia profesional y cumplimiento regulatorio.",
+    "legalName": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+    "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Polonia",
+    "email": "office@empireamp.com",
+    "phone": "+48 729 225 353",
+    "nip": "9541283669",
+    "regon": "273474870",
+    "foundingDate": "2018"
+  },
+  "footer": {
+    "description": "Arquitectos de corredores de capital global. Centro de asesoría de alta autoridad.",
+    "legalInfo": "Datos del Registro Legal",
+    "copyright": "© 2018 - 2026 AMP EMPIRE",
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "propertyDetails": {
+    "back": "Volver a la lista",
+    "specs": {
+      "price": "Precio",
+      "size": "Área",
+      "bedrooms": "Dormitorios",
+      "bathrooms": "Baños",
+      "year": "Año",
+      "type": "Tipo"
+    }
+  }
+}

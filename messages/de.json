@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Unsere Leistungen",
+    "properties": "Immobilien",
+    "courses": "Kurse",
+    "contact": "KONTAKT",
+    "cta": "Starten Sie mit uns"
+  },
+  "hero": {
+    "tagline": "Architekten globaler Kapital-Korridore",
+    "subheadline": "Verbindung von internationalem Kapital mit erstklassigen Immobilien und Expertise.",
+    "cta": "Starten Sie mit uns",
+    "scrollDown": "Nach unten scrollen"
+  },
+  "about": {
+    "sectionLabel": "Institutionelles Fundament",
+    "headline": "AMP Empire, Architekten globaler Kapital-Korridore",
+    "body": "Gegründet im Jahr 2018 ist es unsere Mission, die Servicestandards im Immobilienbereich auf ein für andere unerreichbares Niveau zu heben.",
+    "bodyExtended": "Wir schlagen die Brücke zwischen internationalem Kapital und Premium-Immobilien und bieten fachkundige Beratung und Management-Services.",
+    "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) ist ein registrierter institutioneller Hub mit Sitz in Warschau, Polen.",
+    "partnersLabel": "Partner",
+    "jobsLabel": "Jobs",
+    "coursesLabel": "Kurse",
+    "clientsLabel": "Klienten",
+    "learnMore": "Mehr erfahren"
+  },
+  "services": {
+    "sectionLabel": "Professionelle Sektoren",
+    "headline": "Leistungssäulen",
+    "subtitle": "Brückenschlag für internationales Kapital durch drei unterschiedliche professionelle Sektoren.",
+    "realEstate": {
+      "title": "Immobilien & Liegenschaftsmanagement",
+      "p1": "Immobilienvermittlung: Lizenzierte Vermittlung von Wohn- und Gewerbeimmobilien.",
+      "p2": "Liegenschaftsmanagement: Umfassendes Management im Auftrag der Eigentümer."
+    },
+    "consulting": {
+      "title": "Strategische Beratung & Consulting",
+      "p1": "Unternehmensberatung: Strategische Beratung zu Geschäftsabläufen und Optimierung.",
+      "p2": "Kapital-Korridore: Strategische Planung für internationale Kapitalbewegungen."
+    },
+    "hospitality": {
+      "title": "Gastronomie & Lifestyle-Assets",
+      "p1": "Restaurantbetrieb: Management und Beratung für Gastronomie-Assets.",
+      "p2": "Unterkunftsservices: Management von Kurzzeitaufenthalten und Beherbergungsbetrieben."
+    }
+  },
+  "courses": {
+    "sectionLabel": "Bildungsakademie",
+    "headline": "Experten-Trainingsmodule",
+    "subtitle": "Hochleistungs-Training für Profis auf dem Premium-Immobilienmarkt.",
+    "modules": {
+      "sales": {
+        "title": "VERKAUF",
+        "description": "Grundlegende und fortgeschrittene Strategien für den Immobilienverkauf."
+      },
+      "negotiations": {
+        "title": "VERHANDLUNGEN",
+        "description": "Meisterschaft im Abschluss hochkarätiger Deals."
+      },
+      "coldCalling": {
+        "title": "KALTAKQUISE",
+        "description": "Professionelle Lead-Generierung."
+      },
+      "objections": {
+        "title": "EINWÄNDE",
+        "description": "Fortgeschrittene Strategien für den Umgang mit Kundenwiderständen."
+      }
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Internationale Erfolgssignale",
+    "headline": "Globale Erfolgsberichte",
+    "items": {
+      "t1": {
+        "name": "Piotr D.",
+        "location": "Dubai, VAE",
+        "text": "Der Kurs ist ein 'Must-have' für Profis auf dem Premium-Immobilienmarkt."
+      },
+      "t2": {
+        "name": "Faisal A.",
+        "location": "Riad, Saudi-Arabien",
+        "text": "Schloss meinen ersten Verkauf unmittelbar nach Abschluss des Verhandlungsmoduls ab."
+      },
+      "t3": {
+        "name": "Sarah N.",
+        "location": "Dublin, Irland",
+        "text": "Lobte die Leidenschaft der Instruktoren und das Experten-Verhandlungstraining."
+      },
+      "t4": {
+        "name": "Natalia K.",
+        "location": "Toronto, Kanada",
+        "text": "Gewann das Vertrauen, als Maklerin mit ersten Verträgen zu starten."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Kontakt",
+    "headline": "Verbindung zum Hauptsitz in Warschau",
+    "subtitle": "Professionelle Transparenz und Einhaltung rechtlicher Vorschriften.",
+    "legalName": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+    "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Polen",
+    "email": "office@empireamp.com",
+    "phone": "+48 729 225 353",
+    "nip": "9541283669",
+    "regon": "273474870",
+    "foundingDate": "2018"
+  },
+  "footer": {
+    "description": "Architekten globaler Kapital-Korridore. Hochkarätiges Beratungszentrum.",
+    "legalInfo": "Gesetzliche Registerdaten",
+    "copyright": "© 2018 - 2026 AMP EMPIRE",
+    "allRightsReserved": "Alle Rechte vorbehalten"
+  },
+  "propertyDetails": {
+    "back": "Zurück zur Liste",
+    "specs": {
+      "price": "Preis",
+      "size": "Fläche",
+      "bedrooms": "Schlafzimmer",
+      "bathrooms": "Badezimmer",
+      "year": "Jahr",
+      "type": "Typ"
+    }
+  }
+}

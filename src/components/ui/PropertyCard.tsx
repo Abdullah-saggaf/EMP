@@ -25,13 +25,13 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
   };
 
   return (
-    <Link href={`/properties/${property.id}` as any} passHref legacyBehavior>
-      <motion.a
+    <Link href={`/properties/${property.slug}` as any} className="block group focus:outline-none">
+      <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-        className="group relative bg-charcoal-800 rounded-2xl overflow-hidden border border-charcoal-700/50 hover:border-gold-500/30 transition-all duration-500 gold-glow-hover block"
+        className="relative bg-charcoal-800 rounded-2xl overflow-hidden border border-charcoal-700/50 group-hover:border-gold-500/30 transition-all duration-500 gold-glow-hover block"
       >
       {/* Image */}
       <div className="relative h-64 overflow-hidden">
@@ -116,7 +116,7 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
           </motion.div>
         </div>
       </div>
-      </motion.a>
+      </motion.div>
     </Link>
   );
 }

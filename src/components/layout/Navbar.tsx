@@ -10,10 +10,10 @@ import Button from "@/components/ui/Button";
 
 const navLinks = [
   { key: "home", href: "/" as const },
-  { key: "about", href: "/about" as const },
   { key: "properties", href: "/properties" as const },
   { key: "services", href: "/services" as const },
   { key: "courses", href: "/courses" as const },
+  { key: "about", href: "/about" as const },
   { key: "contact", href: "/contact" as const },
 ];
 
@@ -60,7 +60,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 start-0 end-0 z-50 transition-all duration-500 ${
-          isScrolled ? "glass py-3" : "bg-transparent py-5"
+          isScrolled ? "glass py-4" : "bg-transparent py-8"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -70,19 +70,11 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             id="navbar-logo"
           >
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
-              <span className="font-heading font-bold text-charcoal-900 text-sm">
-                AE
-              </span>
-            </div>
-            <span className="font-heading text-lg font-bold tracking-wide">
-              <span className="text-cream-100">AMP</span>{" "}
-              <span className="text-gold-500">Empire</span>
-            </span>
+            <img src="/logo.png" alt="AMP Empire Logo" className="h-[64px] md:h-[72px] w-auto object-contain transition-all duration-300" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-8">
             {navLinks.map(({ key, href }) => (
               <Link
                 key={key}

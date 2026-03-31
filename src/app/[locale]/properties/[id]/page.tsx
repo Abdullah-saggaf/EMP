@@ -2,33 +2,34 @@ import { notFound } from "next/navigation";
 import { getPropertyById, getProperties } from "@/lib/properties";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowLeft, MapPin, Calendar, Layers, Bed, Bath, Expand } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, Layers, Bed, Bath, Expand, MessageCircle, Key, Share2, Save, Heart, Scale } from "lucide-react";
 
 import PropertyGallery from "@/components/ui/PropertyGallery";
 import PropertyFeatures from "@/components/ui/PropertyFeatures";
 import Button from "@/components/ui/Button";
+import SimilarProperties from "@/components/sections/SimilarProperties";
 
 interface PropertyPageProps {
-  params: {
+  params: Promise<{
     locale: string;
     id: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
   const properties = await getProperties();
   const locales = ["en", "pl", "ar"];
 
-  // Generate paths for all properties across all locales
   return locales.flatMap((locale) =>
     properties.map((p) => ({
       locale,
-      id: p.id,
+      id: p.slug,
     }))
   );
 }
 
-export async function generateMetadata({ params: { locale, id } }: PropertyPageProps) {
+export async function generateMetadata({ params }: PropertyPageProps) {
+  const { locale, id } = await params;
   const property = await getPropertyById(id);
   
   if (!property) {
@@ -43,10 +44,15 @@ export async function generateMetadata({ params: { locale, id } }: PropertyPageP
   };
 }
 
-export default async function PropertyPage({ params: { locale, id } }: PropertyPageProps) {
+export default async function PropertyPage({ params }: PropertyPageProps) {
+  const { locale, id } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("propertyDetails");
-  const property = await getPropertyById(id);
+  const tContact = await getTranslations("contact");
+  const allProperties = await getProperties();
+  if (!id) notFound();
+  const safeId = decodeURIComponent(id).trim();
+  const property = allProperties.find((p) => String(p.id).trim() === safeId || p.slug === safeId);
 
   if (!property) {
     notFound();
@@ -90,13 +96,20 @@ export default async function PropertyPage({ params: { locale, id } }: PropertyP
               <h1 className="text-3xl md:text-5xl font-heading font-bold text-cream-100 leading-tight mb-4">
                 {property.title || `${property.type} in ${property.district || property.city}`}
               </h1>
-              <div className="flex items-center gap-2 text-charcoal-300 font-heading">
+              <div className="flex items-center gap-2 text-charcoal-300 font-heading mb-6">
                 <MapPin className="w-5 h-5 text-gold-500" />
                 <span>
                   {[property.neighborhood, property.district, property.city, property.country]
                     .filter(Boolean)
                     .join(", ")}
                 </span>
+              </div>
+              
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-charcoal-400 text-sm font-medium">
+                <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-gold-500/70" /> {property.constructionyear ? `Listed/Built ${property.constructionyear}` : "Recently Listed"}</span>
+                <div className="h-4 w-px bg-charcoal-700 hidden sm:block"></div>
+                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Save className="w-4 h-4" /> Save</button>
+                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Share2 className="w-4 h-4" /> Share</button>
               </div>
             </div>
 
@@ -201,11 +214,26 @@ export default async function PropertyPage({ params: { locale, id } }: PropertyP
                   <h2 className="text-2xl font-heading font-bold text-cream-100">{t("location")}</h2>
                   <div className="h-px bg-gold-500/20 flex-1" />
                 </div>
-                <div className="p-6 rounded-2xl bg-charcoal-800/20 border border-charcoal-700/30 text-charcoal-300">
-                  <p className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 text-gold-500" />
-                    {property.address}
-                  </p>
+                <div className="rounded-2xl overflow-hidden bg-charcoal-800/20 border border-charcoal-700/30 shadow-lg shadow-charcoal-900/40">
+                  <div className="p-4 bg-charcoal-900/50 border-b border-charcoal-700/30 flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-gold-500 flex-shrink-0" />
+                    <p className="text-cream-200 font-medium text-sm sm:text-base leading-tight">
+                      {property.address}
+                    </p>
+                  </div>
+                  <div className="w-full h-[400px] bg-charcoal-900/50 relative">
+                    <iframe
+                      title={`Map showing ${property.address}`}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      src={`https://maps.google.com/maps?q=${encodeURIComponent(property.address)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+                      className="absolute inset-0"
+                    ></iframe>
+                  </div>
                 </div>
               </section>
             )}
@@ -226,20 +254,28 @@ export default async function PropertyPage({ params: { locale, id } }: PropertyP
                 <Button href="/contact" size="lg" className="w-full">
                   {t("contactAgent")}
                 </Button>
-                {property.url && (
-                  <a 
-                    href={property.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-full text-center py-3 text-sm font-heading font-medium tracking-wide border border-charcoal-700 text-charcoal-300 hover:text-gold-500 hover:border-gold-500/30 rounded-xl transition-all"
-                  >
-                    View Source Partner
-                  </a>
-                )}
+                
+                <a
+                  href={`https://wa.me/${tContact("phone").replace(/\D/g, "")}?text=${encodeURIComponent(`Hi, I am interested in property: ${property.title || property.type}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-heading font-semibold tracking-wide transition-all bg-[#25D366] text-white hover:bg-[#128C7E] shadow-lg shadow-[#25D366]/20 border border-[#25D366]/30"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Contact on WhatsApp
+                </a>
               </div>
             </div>
           </div>
         </div>
+        
+        {/* Similar Properties */}
+        <SimilarProperties 
+          currentPropertyId={property.id} 
+          properties={allProperties} 
+          type={property.type} 
+          city={property.city} 
+        />
       </div>
     </main>
   );

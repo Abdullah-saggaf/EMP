@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Dumbbell, Car, Trees, Box, Waves, Building } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Dumbbell, Car, Trees, Wind, Utensils, Zap } from "lucide-react";
 
 interface PropertyFeaturesProps {
   features: string[];
@@ -10,43 +10,128 @@ interface PropertyFeaturesProps {
 export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
   if (!features || features.length === 0) return null;
 
-  // Simple hardcoded mapping for luxury/common real estate terms to icons
-  // Unmatched will fallback to CheckCircle2
-  const getIconForFeature = (feature: string) => {
-    const f = feature.toLowerCase();
-    if (f.includes("pool") || f.includes("sea")) return Waves;
-    if (f.includes("gym") || f.includes("fitness")) return Dumbbell;
-    if (f.includes("car") || f.includes("park") || f.includes("garage")) return Car;
-    if (f.includes("security") || f.includes("cctv")) return ShieldCheck;
-    if (f.includes("garden") || f.includes("nature") || f.includes("park")) return Trees;
-    if (f.includes("storage") || f.includes("wardrobe")) return Box;
-    if (f.includes("complex") || f.includes("lift")) return Building;
-    return CheckCircle2;
-  };
+  // 1. Filter out redundant/unnecessary direction labels and duplicates
+  const ignoreList = ['west', 'east', 'north', 'south', 'north-west', 'north-east', 'south-west', 'south-east'];
+  const cleanFeatures = Array.from(new Set(features)).filter(f => !ignoreList.includes(f.toLowerCase().trim()));
+
+  // 2. Define categories with match keywords and an icon
+  const categories = [
+    {
+      id: "comfort",
+      title: "Climate & Smart Home",
+      icon: Wind,
+      keywords: ["air conditioning", "smart-home", "underfloor", "heating", "generator", "jacuzzi", "blinds"]
+    },
+    {
+      id: "leisure",
+      title: "Leisure & Wellness",
+      icon: Dumbbell,
+      keywords: ["pool", "sauna", "spa", "fitness", "gym", "turkish bath", "social club", "game room", "barbeque", "solarium"]
+    },
+    {
+      id: "security",
+      title: "Building & Security",
+      icon: ShieldCheck,
+      keywords: ["security", "cctv", "camera", "concierge", "lift", "complex", "wheelchair"]
+    },
+    {
+      id: "kitchen",
+      title: "Kitchen & Interior",
+      icon: Utensils,
+      keywords: ["kitchen", "white goods", "appliances", "wardrobe", "dressing", "storage", "laundry", "cellar", "en-suite", "satellite"]
+    },
+    {
+      id: "outdoor",
+      title: "Outdoors & Views",
+      icon: Trees,
+      keywords: ["balcony", "terrace", "garden", "nature", "sea", "view", "forest", "mountain", "beach", "city view", "lake", "airport", "stores", "restaurants", "bus"]
+    },
+    {
+      id: "parking",
+      title: "Parking & Facilities",
+      icon: Car,
+      keywords: ["car", "park", "garage", "ev charge", "metro"]
+    }
+  ];
+
+  // 3. Group features into categories dynamically
+  const groupedFeatures: Record<string, string[]> = {};
+  const uncategorized: string[] = [];
+
+  cleanFeatures.forEach(feature => {
+    const fLower = feature.toLowerCase();
+    let assigned = false;
+    for (const cat of categories) {
+      if (cat.keywords.some(kw => fLower.includes(kw))) {
+        if (!groupedFeatures[cat.title]) groupedFeatures[cat.title] = [];
+        groupedFeatures[cat.title].push(feature);
+        assigned = true;
+        break; // Apply to the first matched category
+      }
+    }
+    if (!assigned) {
+      uncategorized.push(feature);
+    }
+  });
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {features.map((feature, idx) => {
-        const Icon = getIconForFeature(feature);
-
+    <div className="space-y-6">
+      {categories.map((cat, groupIdx) => {
+        const items = groupedFeatures[cat.title];
+        if (!items || items.length === 0) return null;
+        
         return (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 10 }}
+          <motion.div 
+            key={cat.id}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: idx * 0.05 }}
-            className="flex items-center gap-3 p-4 rounded-xl bg-charcoal-800/40 border border-charcoal-700/30 hover:border-gold-500/30 transition-colors"
+            transition={{ duration: 0.4, delay: groupIdx * 0.1 }}
+            className="bg-charcoal-900/40 border border-charcoal-800/60 rounded-2xl p-6 hover:border-gold-500/20 transition-colors duration-500"
           >
-            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-charcoal-900/50 flex items-center justify-center border border-charcoal-700/50">
-              <Icon className="w-5 h-5 text-gold-500" />
+            <div className="flex items-center gap-4 mb-6 pb-4 border-b border-charcoal-800/60">
+              <div className="w-10 h-10 rounded-xl bg-charcoal-800/80 flex items-center justify-center text-gold-500 border border-charcoal-700/50 shadow-inner">
+                <cat.icon className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold text-cream-100">{cat.title}</h3>
             </div>
-            <span className="text-sm font-heading font-medium text-cream-100 flex-1">
-              {feature}
-            </span>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
+              {items.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-3 group">
+                  <CheckCircle2 className="w-5 h-5 text-gold-500/60 group-hover:text-gold-400 transition-colors flex-shrink-0" />
+                  <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">{item}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         );
       })}
+
+      {/* Uncategorized items at the end */}
+      {uncategorized.length > 0 && (
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-charcoal-900/40 border border-charcoal-800/60 rounded-2xl p-6"
+        >
+          <div className="flex items-center gap-4 mb-6 pb-4 border-b border-charcoal-800/60">
+            <div className="w-10 h-10 rounded-xl bg-charcoal-800/80 flex items-center justify-center text-gold-500 border border-charcoal-700/50 shadow-inner">
+              <Zap className="w-5 h-5" />
+            </div>
+            <h3 className="text-xl font-heading font-semibold text-cream-100">Other Features</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
+            {uncategorized.map((item, idx) => (
+              <div key={idx} className="flex items-start gap-3 group">
+                <CheckCircle2 className="w-5 h-5 text-gold-500/60 group-hover:text-gold-400 transition-colors flex-shrink-0" />
+                <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">{item}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }

@@ -58,9 +58,10 @@ export default function Footer() {
 
   const quickLinks = [
     { label: tNav("home"), href: "/" as const },
-    { label: tNav("about"), href: "/about" as const },
+    { label: tNav("properties"), href: "/properties" as const },
     { label: tNav("services"), href: "/services" as const },
     { label: tNav("courses"), href: "/courses" as const },
+    { label: tNav("about"), href: "/about" as const },
     { label: tNav("contact"), href: "/contact" as const },
     { label: t("privacyPolicy"), href: "/" as const },
   ];
@@ -72,17 +73,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center">
-                <span className="font-heading font-bold text-charcoal-900 text-sm">
-                  AE
-                </span>
-              </div>
-              <span className="font-heading text-lg font-bold tracking-wide">
-                <span className="text-cream-100">AMP</span>{" "}
-                <span className="text-gold-500">Empire</span>
-              </span>
-            </div>
+            <Link href="/" className="inline-block mb-8 transition-transform hover:scale-105 duration-300">
+              <img src="/logo.png" alt="AMP Empire Logo" className="h-[80px] w-auto object-contain" />
+            </Link>
             <p className="text-sm text-charcoal-400 leading-relaxed mb-6">
               {t("description")}
             </p>

@@ -1,5 +1,6 @@
 export interface Property {
   id: string;
+  slug: string;
   url?: string;
   title?: string;
   description?: string;

@@ -18,11 +18,18 @@ export async function getProperties(): Promise<Property[]> {
 
     const rawProperties = data?.properties?.property ?? data?.feed?.property ?? [];
 
-    return rawProperties.map((p: Record<string, unknown>, index: number) => ({
-      id: String(p.id ?? p["@_id"] ?? index),
-      url: typeof p.url === "string" ? p.url : undefined,
-      title: String(p.title ?? p.name ?? ""),
-      description: String(p.description ?? p.desc ?? ""),
+    return rawProperties.map((p: Record<string, unknown>, index: number) => {
+      const generatedTitle = generateCreativeTitle(p);
+      const rawId = String(p.id ?? p["@_id"] ?? index).trim();
+      const baseSlug = generatedTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      const slug = `${baseSlug}-${index}`;
+
+      return {
+        id: rawId,
+        slug,
+        url: typeof p.url === "string" ? p.url : undefined,
+        title: generatedTitle,
+        description: String(p.description ?? p.desc ?? ""),
       price: Number(p.price ?? 0),
       currency: String(p.currency ?? p.price_currency ?? "EUR"),
       price_eur: Number(p.price_eur ?? 0),
@@ -45,7 +52,8 @@ export async function getProperties(): Promise<Property[]> {
       constructionyear: p.constructionyear,
       features: extractFeatures(p),
       images: extractImages(p),
-    }));
+      };
+    });
   } catch (error) {
     console.error("[XML Feed] Failed to read or parse local property.xml:", error);
     return [];
@@ -54,7 +62,48 @@ export async function getProperties(): Promise<Property[]> {
 
 export async function getPropertyById(id: string): Promise<Property | null> {
   const allProperties = await getProperties();
-  return allProperties.find((p) => p.id === id) || null;
+  if (!id) return null;
+  const safeId = decodeURIComponent(id).trim();
+  const property = allProperties.find((p) => String(p.id).trim() === safeId || p.slug === safeId);
+  if (!property) {
+    console.warn(`[Property Not Found] Requested ID/Slug: "${id}" (decoded: "${safeId}")`);
+  }
+  return property || null;
+}
+
+function generateCreativeTitle(p: Record<string, unknown>): string {
+  // If a strong explicit title exists, use it
+  if (p.title && String(p.title).length > 10) return String(p.title);
+  
+  const type = String(p.type ?? p.property_type ?? "Property");
+  const subtype = typeof p.subtype === "string" ? p.subtype : "";
+  const location = [p.neighborhood, p.district, p.city, p.country].filter(Boolean)[0] || "Prime Location";
+  
+  const features = extractFeatures(p).map(f => f.toLowerCase());
+  const price = Number(p.price ?? 0);
+  
+  let adjective = "Exclusive";
+  if (features.some(f => f.includes("sea") || f.includes("waterfront") || f.includes("beach"))) {
+    adjective = "Breathtaking Waterfront";
+  } else if (features.includes("penthouse") || subtype.toLowerCase().includes("penthouse")) {
+    adjective = "Ultra-Luxury";
+  } else if (features.some(f => f.includes("nature") || f.includes("golf"))) {
+    adjective = "Tranquil Scenic";
+  } else if (price > 5000000) {
+    adjective = "Spectacular Luxury";
+  } else if (type.toLowerCase() === "villa" || type.toLowerCase() === "mansion") {
+    adjective = "Exquisite";
+  } else if (subtype.toLowerCase().includes("brand new")) {
+    adjective = "Brand New Premium";
+  } else {
+    adjective = "Premium";
+  }
+
+  const typeDisplay = subtype && !subtype.toLowerCase().includes("floor") 
+    ? `${subtype} ${type}` 
+    : type;
+    
+  return `${adjective} ${typeDisplay} in ${location}`;
 }
 
 function extractFeatures(p: Record<string, unknown>): string[] {

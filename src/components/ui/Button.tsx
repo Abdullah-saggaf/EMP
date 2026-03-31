@@ -34,9 +34,9 @@ export default function Button({
   };
 
   const sizes = {
-    sm: "px-5 py-2.5 text-xs rounded-lg",
-    md: "px-8 py-3.5 text-sm rounded-xl",
-    lg: "px-10 py-4.5 text-base rounded-xl",
+    sm: "px-8 py-3 text-sm rounded-lg",
+    md: "px-10 py-4 text-base rounded-xl",
+    lg: "px-14 py-6 text-xl rounded-xl",
   };
 
   const combinedStyles = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
@@ -52,14 +52,14 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href as any} passHref legacyBehavior>
-        <motion.a
+      <Link href={href as any} className="inline-block rounded-xl focus:outline-none">
+        <motion.div
           className={combinedStyles}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
         >
           {content}
-        </motion.a>
+        </motion.div>
       </Link>
     );
   }

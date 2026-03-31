@@ -6,6 +6,7 @@ import { Inter, Outfit, Noto_Sans_Arabic } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/ui/CookieBanner";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -25,6 +26,12 @@ const notoArabic = Noto_Sans_Arabic({
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
 });
+
+export const metadata = {
+  title: "AMP Empire — Global Investment Advisory & Premium Real Estate",
+  description:
+    "AMP Empire connects capital with real investment opportunities across European and Middle Eastern markets. Premium real estate advisory, investment consulting, and training courses.",
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -72,6 +79,7 @@ export default async function LocaleLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

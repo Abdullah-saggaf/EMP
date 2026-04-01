@@ -23,6 +23,21 @@
     "bed": "Zimmer",
     "bath": "Bäder",
     "sqm": "m²",
+    "fallbackTitle": "{type} in {city}",
+    "types": {
+      "apartment": "Wohnungen",
+      "villa": "Villa",
+      "house": "Haus",
+      "townhouse": "Reihenhaus",
+      "penthouse": "Penthouse",
+      "studio": "Studio",
+      "duplex": "Doppelhaus",
+      "office": "Büro",
+      "commercial": "Gewerbe",
+      "mansion": "Herrenhaus",
+      "land": "Grundstück",
+      "hotel": "Hotel"
+    },
     "comingSoon": "Demnächst",
     "noProperties": "Keine Immobilien gefunden, die Ihren Kriterien entsprechen."
   },

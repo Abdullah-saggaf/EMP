@@ -23,6 +23,21 @@
     "bed": "Hab.",
     "bath": "Baños",
     "sqm": "m²",
+    "fallbackTitle": "{type} en {city}",
+    "types": {
+      "apartment": "Apartamentos",
+      "villa": "Villa",
+      "house": "Casa",
+      "townhouse": "Casa adosada",
+      "penthouse": "Ático",
+      "studio": "Estudio",
+      "duplex": "Dúplex",
+      "office": "Oficina",
+      "commercial": "Comercial",
+      "mansion": "Mansión",
+      "land": "Terreno",
+      "hotel": "Hotel"
+    },
     "comingSoon": "Próximamente",
     "noProperties": "No se encontraron propiedades que coincidan con sus criterios."
   },

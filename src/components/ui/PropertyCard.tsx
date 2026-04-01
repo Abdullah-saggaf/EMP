@@ -15,8 +15,15 @@ interface PropertyCardProps {
 export default function PropertyCard({ property, index }: PropertyCardProps) {
   const t = useTranslations("properties");
 
+  const localizedType = localizePropertyType(property.type, t);
+  const generatedTitle = resolveMessage(t, "fallbackTitle", { type: localizedType, city: property.city })
+    ?? `${localizedType} in ${property.city}`;
+  const displayTitle = shouldUseOriginalTitle(property.title)
+    ? property.title!
+    : generatedTitle;
+
   return (
-    <Link href={`/properties/${property.id}` as any} className="block">
+    <Link href={`/properties/${property.id}`} className="block">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +36,7 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
           {property.images && property.images.length > 0 ? (
             <Image
               src={property.images[0]}
-              alt={property.title || `${property.type} in ${property.city}`}
+              alt={displayTitle}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -50,7 +57,7 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
           {/* Type badge */}
           <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
             <span className="text-[9px] font-black tracking-[0.2em] uppercase text-white/60">
-              {property.type}
+              {localizedType}
             </span>
           </div>
 
@@ -70,7 +77,7 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
 
           {/* Title */}
           <h3 className="font-black text-base text-white tracking-tight mb-4 line-clamp-1 group-hover:text-primary transition-colors duration-300">
-            {property.title || `${property.type} in ${property.city}`}
+            {displayTitle}
           </h3>
 
           {/* Divider */}
@@ -94,7 +101,7 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
               {property.size > 0 && (
                 <div className="flex items-center gap-1.5 text-xs text-white/50 font-semibold">
                   <Maximize className="w-3.5 h-3.5 text-primary/60" />
-                  <span>{property.size} m²</span>
+                  <span>{property.size} {t("sqm")}</span>
                 </div>
               )}
             </div>
@@ -107,4 +114,69 @@ export default function PropertyCard({ property, index }: PropertyCardProps) {
       </motion.div>
     </Link>
   );
+}
+
+function shouldUseOriginalTitle(title?: string): boolean {
+  if (!title) return false;
+  const generatedPrefixes = [
+    "premium",
+    "breathtaking waterfront",
+    "ultra-luxury",
+    "tranquil scenic",
+    "spectacular luxury",
+    "exquisite",
+    "brand new premium",
+  ];
+
+  const normalized = title.toLowerCase().trim();
+  const looksGenerated = generatedPrefixes.some((prefix) => normalized.startsWith(prefix)) && normalized.includes(" in ");
+  return !looksGenerated;
+}
+
+type Translator = (key: string, values?: Record<string, string | number>) => string;
+
+function resolveMessage(t: Translator, key: string, values?: Record<string, string | number>): string | null {
+  const translated = t(key, values);
+  if (!translated) return null;
+  if (translated === key) return null;
+  if (translated.includes(`properties.${key}`)) return null;
+  return translated;
+}
+
+function localizePropertyType(rawType: string, t: Translator): string {
+  const normalized = rawType.toLowerCase().trim();
+  const singular = normalized.endsWith("s") ? normalized.slice(0, -1) : normalized;
+
+  const aliases: Record<string, string> = {
+    apartments: "apartment",
+    apartment: "apartment",
+    villas: "villa",
+    villa: "villa",
+    house: "house",
+    houses: "house",
+    townhouse: "townhouse",
+    townhouses: "townhouse",
+    penthouse: "penthouse",
+    penthouses: "penthouse",
+    studio: "studio",
+    studios: "studio",
+    duplex: "duplex",
+    duplexes: "duplex",
+    office: "office",
+    offices: "office",
+    commercial: "commercial",
+    mansion: "mansion",
+    mansions: "mansion",
+    land: "land",
+    plot: "land",
+    plots: "land",
+    hotel: "hotel",
+    hotels: "hotel",
+  };
+
+  const key = aliases[normalized] ?? aliases[singular];
+  if (!key) return rawType;
+
+  const messageKey = `types.${key}`;
+  return resolveMessage(t, messageKey) ?? rawType;
 }

@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Dumbbell, Car, Trees, Wind, Utensils, Zap } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 interface PropertyFeaturesProps {
   features: string[];
@@ -10,6 +11,9 @@ interface PropertyFeaturesProps {
 
 export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
   const t = useTranslations("propertyDetails.featuresGroups");
+  const tDetails = useTranslations("propertyDetails");
+  const locale = useLocale();
+  const isRtl = locale === "ar";
 
   if (!features || features.length === 0) return null;
 
@@ -107,9 +111,17 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
               {items.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 group">
+                <div
+                  key={idx}
+                  className={cn(
+                    "flex items-start gap-3 group",
+                    isRtl && "flex-row-reverse text-right"
+                  )}
+                >
                   <CheckCircle2 className="w-5 h-5 text-gold-500/60 group-hover:text-gold-400 transition-colors flex-shrink-0" />
-                  <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">{item}</span>
+                  <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">
+                    {localizeFeatureLabel(item, tDetails)}
+                  </span>
                 </div>
               ))}
             </div>
@@ -133,9 +145,17 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
             {uncategorized.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3 group">
+              <div
+                key={idx}
+                className={cn(
+                  "flex items-start gap-3 group",
+                  isRtl && "flex-row-reverse text-right"
+                )}
+              >
                 <CheckCircle2 className="w-5 h-5 text-gold-500/60 group-hover:text-gold-400 transition-colors flex-shrink-0" />
-                <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">{item}</span>
+                <span className="text-charcoal-300 group-hover:text-cream-200 transition-colors text-sm font-medium leading-tight pt-0.5">
+                  {localizeFeatureLabel(item, tDetails)}
+                </span>
               </div>
             ))}
           </div>
@@ -143,4 +163,26 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
       )}
     </div>
   );
+}
+
+function normalizeFeatureKey(value: string): string {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+type Translator = (key: string) => string;
+
+function localizeFeatureLabel(label: string, tDetails: Translator): string {
+  const key = normalizeFeatureKey(label);
+  const candidate = tDetails(`features.${key}`);
+
+  // next-intl fallback may return the key path when missing.
+  if (!candidate || candidate === `features.${key}` || candidate.includes(`propertyDetails.features.${key}`)) {
+    return label;
+  }
+
+  return candidate;
 }

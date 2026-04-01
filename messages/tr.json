@@ -23,6 +23,21 @@
     "bed": "Yatak Odası",
     "bath": "Banyo",
     "sqm": "m²",
+    "fallbackTitle": "{city} konumunda {type}",
+    "types": {
+      "apartment": "Daireler",
+      "villa": "Villa",
+      "house": "Ev",
+      "townhouse": "Sıra Ev",
+      "penthouse": "Çatı Katı",
+      "studio": "Stüdyo",
+      "duplex": "Dubleks",
+      "office": "Ofis",
+      "commercial": "Ticari",
+      "mansion": "Köşk",
+      "land": "Arsa",
+      "hotel": "Otel"
+    },
     "comingSoon": "Yakında",
     "noProperties": "Kriterlerinize uyan mülk bulunamadı."
   },

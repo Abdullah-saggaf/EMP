@@ -32,6 +32,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PropertyPageProps) {
   const { locale, id } = await params;
   const property = await getPropertyById(id);
+  const tProperties = await getTranslations({ locale, namespace: "properties" });
   
   if (!property) {
     return {
@@ -39,9 +40,16 @@ export async function generateMetadata({ params }: PropertyPageProps) {
     };
   }
 
+  const localizedType = localizePropertyType(property.type, tProperties);
+  const generatedTitle = resolveMessage(tProperties, "fallbackTitle", { type: localizedType, city: property.city })
+    ?? `${localizedType} in ${property.city}`;
+  const displayTitle = shouldUseOriginalTitle(property.title)
+    ? property.title!
+    : generatedTitle;
+
   return {
-    title: `${property.title || property.type} in ${property.city} | AMP Empire`,
-    description: property.description || `Luxury ${property.type} located in ${property.city}.`,
+    title: `${displayTitle} | AMP Empire`,
+    description: property.description || `Luxury ${localizedType} located in ${property.city}.`,
   };
 }
 
@@ -49,6 +57,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   const { locale, id } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("propertyDetails");
+  const tProperties = await getTranslations("properties");
   const tContact = await getTranslations("contact");
   const allProperties = await getProperties();
   if (!id) notFound();
@@ -58,6 +67,13 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   if (!property) {
     notFound();
   }
+
+  const localizedType = localizePropertyType(property.type, tProperties);
+  const generatedTitle = resolveMessage(tProperties, "fallbackTitle", { type: localizedType, city: property.district || property.city })
+    ?? `${localizedType} in ${property.district || property.city}`;
+  const displayTitle = shouldUseOriginalTitle(property.title)
+    ? property.title!
+    : generatedTitle;
 
   const formatPrice = (price: number, currency: string) => {
     return new Intl.NumberFormat(locale === "ar" ? "ar-AE" : "en-US", {
@@ -86,7 +102,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-3 py-1 text-xs font-heading font-semibold tracking-widest uppercase bg-gold-500/10 text-gold-500 rounded-full border border-gold-500/20">
-                  {property.type}
+                  {localizedType}
                 </span>
                 {property.subtype && (
                   <span className="px-3 py-1 text-xs font-heading font-medium text-cream-200 bg-charcoal-800 rounded-full border border-charcoal-700/50">
@@ -95,7 +111,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 )}
               </div>
               <h1 className="text-3xl md:text-5xl font-heading font-bold text-cream-100 leading-tight mb-4">
-                {property.title || `${property.type} in ${property.district || property.city}`}
+                {displayTitle}
               </h1>
               <div className="flex items-center gap-2 text-charcoal-300 font-heading mb-6">
                 <MapPin className="w-5 h-5 text-gold-500" />
@@ -280,4 +296,69 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
       </div>
     </main>
   );
+}
+
+type Translator = (key: string, values?: Record<string, string | number>) => string;
+
+function resolveMessage(t: Translator, key: string, values?: Record<string, string | number>): string | null {
+  const translated = t(key, values);
+  if (!translated) return null;
+  if (translated === key) return null;
+  if (translated.includes(`properties.${key}`)) return null;
+  return translated;
+}
+
+function shouldUseOriginalTitle(title?: string): boolean {
+  if (!title) return false;
+  const generatedPrefixes = [
+    "premium",
+    "breathtaking waterfront",
+    "ultra-luxury",
+    "tranquil scenic",
+    "spectacular luxury",
+    "exquisite",
+    "brand new premium",
+  ];
+
+  const normalized = title.toLowerCase().trim();
+  const looksGenerated = generatedPrefixes.some((prefix) => normalized.startsWith(prefix)) && normalized.includes(" in ");
+  return !looksGenerated;
+}
+
+function localizePropertyType(rawType: string, t: Translator): string {
+  const normalized = rawType.toLowerCase().trim();
+  const singular = normalized.endsWith("s") ? normalized.slice(0, -1) : normalized;
+
+  const aliases: Record<string, string> = {
+    apartments: "apartment",
+    apartment: "apartment",
+    villas: "villa",
+    villa: "villa",
+    house: "house",
+    houses: "house",
+    townhouse: "townhouse",
+    townhouses: "townhouse",
+    penthouse: "penthouse",
+    penthouses: "penthouse",
+    studio: "studio",
+    studios: "studio",
+    duplex: "duplex",
+    duplexes: "duplex",
+    office: "office",
+    offices: "office",
+    commercial: "commercial",
+    mansion: "mansion",
+    mansions: "mansion",
+    land: "land",
+    plot: "land",
+    plots: "land",
+    hotel: "hotel",
+    hotels: "hotel",
+  };
+
+  const key = aliases[normalized] ?? aliases[singular];
+  if (!key) return rawType;
+
+  const messageKey = `types.${key}`;
+  return resolveMessage(t, messageKey) ?? rawType;
 }

@@ -1,4 +1,46 @@
 {
+  "properties": {
+    "client": {
+      "searchPlaceholder": "Search by city, country, type, or property name…",
+      "filterLabel": "Filter",
+      "allCountries": "All Countries",
+      "allTypes": "All Property Types",
+      "sort": {
+        "newest": "Newest First",
+        "oldest": "Oldest First",
+        "priceDesc": "Price: High to Low",
+        "priceAsc": "Price: Low to High"
+      },
+      "clearBtn": "Clear",
+      "resultsFound": "{count} properties found",
+      "resultFound": "{count} property found",
+      "resultsFor": "Results for \"{query}\"",
+      "clearAllFilters": "Clear All Filters"
+    },
+    "sectionLabel": "Premium Portfolio",
+    "headline": "Featured Properties",
+    "subtitle": "Exclusive access to unparalleled real estate.",
+    "bed": "Beds",
+    "bath": "Baths",
+    "sqm": "m²",
+    "fallbackTitle": "{type} in {city}",
+    "types": {
+      "apartment": "Apartments",
+      "villa": "Villa",
+      "house": "House",
+      "townhouse": "Townhouse",
+      "penthouse": "Penthouse",
+      "studio": "Studio",
+      "duplex": "Duplex",
+      "office": "Office",
+      "commercial": "Commercial",
+      "mansion": "Mansion",
+      "land": "Land",
+      "hotel": "Hotel"
+    },
+    "comingSoon": "Coming Soon",
+    "noProperties": "No properties found matching your criteria."
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
@@ -9,6 +51,8 @@
     "cta": "Start with us"
   },
   "hero": {
+    "badge": "Est. 2018 Warsaw Global HQ",
+    "portfolioCta": "View Portfolio",
     "tagline": "Architects of Global Capital Corridors",
     "subheadline": "Connecting international capital with premium real estate and expertise.",
     "cta": "Start with us",
@@ -92,6 +136,63 @@
         "name": "Natalia K.",
         "location": "Toronto, Canada",
         "text": "Gained the confidence to start as a broker with early contracts."
+      },
+      "t5": {
+        "name": "Oliver T.",
+        "location": "London, UK",
+        "text": "Outstanding strategic growth advisory."
+      },
+      "t6": {
+        "name": "Emma W.",
+        "location": "Dubai, UAE",
+        "text": "A masterclass in elite asset management."
+      },
+      "t7": {
+        "name": "Lukas M.",
+        "location": "Berlin, Germany",
+        "text": "Exceptional ROI on global portfolios."
+      },
+      "t8": {
+        "name": "Sara A.",
+        "location": "Riyadh, KSA",
+        "text": "Absolute transparency and premium service."
+      },
+      "t9": {
+        "name": "Michal P.",
+        "location": "Warsaw, Poland",
+        "text": "The Academy redefined my real estate career."
+      },
+      "t10": {
+        "name": "Elena R.",
+        "location": "Madrid, Spain",
+        "text": "Unparalleled access to tier-1 properties."
+      }
+    }
+  },
+  "homePreview": {
+    "sectionLabel": "Explore Empire",
+    "headline": "Divisions of Excellence",
+    "subtitle": "Comprehensive architecture for global capital and elite advisory.",
+    "cards": {
+      "about": {
+        "title": "About Us",
+        "description": "Our legacy, vision, and operational excellence.",
+        "cta": "Discover More"
+      },
+      "properties": {
+        "title": "Portfolio",
+        "description": "Exclusive access to premium high-yield assets.",
+        "cta": "View Properties"
+      },
+      "services": {
+        "title": "Advisory",
+        "description": "Strategic consulting for institutional capital.",
+        "cta": "Our Services"
+      },
+      "courses": {
+        "title": "Academy",
+        "description": "Elite educational programs for future brokers.",
+        "cta": "Start Learning"
       }
     }
   },
@@ -111,17 +212,270 @@
     "description": "Architects of Global Capital Corridors. High-authority advisory hub.",
     "legalInfo": "Legal Registry Data",
     "copyright": "© 2018 - 2026 AMP EMPIRE",
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "quickLinks": "Quick Links",
+    "courses": "Academy",
+    "coursesLink": "Real Estate Broker Course",
+    "contactInfo": "Contact Information"
   },
   "propertyDetails": {
+    "recentlyListed": "Recently Listed",
+    "listedBuilt": "Listed/Built {year}",
+    "save": "Save",
+    "share": "Share",
+    "sidebarTitle": "AMP Empire",
+    "sidebarDesc": "Premium Real Estate Advisory & Investment Corridors. Contact us to learn more about this exclusive property.",
+    "whatsappBtn": "Contact on WhatsApp",
+    "featuresGroups": {
+      "climate": "Climate & Smart Home",
+      "leisure": "Leisure & Wellness",
+      "security": "Building & Security",
+      "kitchen": "Kitchen & Interior",
+      "outdoor": "Outdoors & Views",
+      "parking": "Parking & Facilities",
+      "other": "Other Features"
+    },
     "back": "Back to listing",
+    "overview": "Overview",
+    "features": {
+      "air_conditioning": "Air Conditioning",
+      "airport_0_50_km": "Airport (0-50 Km)",
+      "airport_100_km": "Airport (100+ Km)",
+      "airport_50_100_km": "Airport (50-100 Km)",
+      "apart_kitchen": "Apart Kitchen",
+      "balcony": "Balcony",
+      "barbeque": "Barbeque",
+      "bars_restaurants": "Bars / Restaurants",
+      "basketball_field": "Basketball Field",
+      "bathtub": "Bathtub",
+      "beach_0_500_m": "Beach (0-500 M)",
+      "beach_1_5_km": "Beach (1-5 Km)",
+      "beach_500_1000_m": "Beach (500-1000 M)",
+      "beach_front": "Beach Front",
+      "beautiful_nature_view": "Beautiful Nature View",
+      "blinds": "Blinds",
+      "bosphorus_view": "Bosphorus View",
+      "bus_station": "Bus Station",
+      "car_park": "Car Park",
+      "car_park_closed": "Car Park (Closed)",
+      "caretaker": "Caretaker",
+      "cellar": "Cellar",
+      "central_heating": "Central Heating",
+      "city_view": "City View",
+      "communal_garden": "Communal Garden",
+      "communal_pool": "Communal Pool",
+      "concierge_service": "Concierge Service",
+      "dressing_room": "Dressing Room",
+      "ev_charge_station": "EV Charge Station",
+      "east": "East",
+      "en_suite_bathroom": "En-Suite Bathroom",
+      "fan_coil": "Fan Coil",
+      "fireplace": "Fireplace",
+      "fitness": "Fitness",
+      "fitted_wardrobe": "Fitted Wardrobe",
+      "football_field": "Football Field",
+      "forest_view": "Forest View",
+      "furnished": "Furnished",
+      "game_room": "Game Room",
+      "gas_combi": "Gas Combi",
+      "generator": "Generator",
+      "golf_view": "Golf View",
+      "heat_share_meter": "Heat Share Meter",
+      "in_a_complex": "In A Complex",
+      "jacuzzi": "Jacuzzi",
+      "kitchen_appliances": "Kitchen Appliances",
+      "lake_0_1_km": "Lake (0-1 Km)",
+      "lake_1_5_km": "Lake (1-5 Km)",
+      "lake_view": "Lake View",
+      "laundry_room": "Laundry Room",
+      "lift": "Lift",
+      "metro": "Metro",
+      "metrobus": "Metrobus",
+      "mountain_view": "Mountain View",
+      "north": "North",
+      "north_east": "North-East",
+      "north_west": "North-West",
+      "open_plan_kitchen": "Open-Plan Kitchen",
+      "playground": "Playground",
+      "private_garden": "Private Garden",
+      "private_pool": "Private Pool",
+      "rental_management": "Rental Management",
+      "spa": "SPA",
+      "satellite_tv": "Satellite TV",
+      "sauna": "Sauna",
+      "sea_0_1_km": "Sea (0-1 Km)",
+      "sea_1_5_km": "Sea (1-5 Km)",
+      "sea_front": "Sea Front",
+      "sea_view": "Sea View",
+      "security_7_24": "Security 7/24",
+      "security_camera": "Security Camera",
+      "shower": "Shower",
+      "smart_home_system": "Smart-Home System",
+      "social_club": "Social Club",
+      "solar_energy": "Solar Energy",
+      "solarium": "Solarium",
+      "south": "South",
+      "south_east": "South-East",
+      "south_west": "South-West",
+      "storage_room": "Storage Room",
+      "stores_shopping_mall": "Stores / Shopping Mall",
+      "stove": "Stove",
+      "tennis_court": "Tennis Court",
+      "terrace": "Terrace",
+      "train_station": "Train Station",
+      "turkish_bath": "Turkish Bath",
+      "underfloor_cooling": "Underfloor Cooling",
+      "underfloor_heating": "Underfloor Heating",
+      "volleyball_field": "Volleyball Field",
+      "west": "West",
+      "wheelchair_friendly": "Wheelchair Friendly",
+      "white_goods": "White Goods"
+    },
+    "location": "Location",
+    "contactAgent": "Contact Agent",
     "specs": {
       "price": "Price",
       "size": "Area",
       "bedrooms": "Bedrooms",
       "bathrooms": "Bathrooms",
       "year": "Year",
+      "floor": "Floor",
       "type": "Type"
+    }
+  },
+  "mission": {
+    "sectionLabel": "Our Mission Since 2018",
+    "headline": "Elevating Real Estate Standards to <highlight>Unreachable</highlight> Levels.",
+    "body1": "Our story began in 2018 with a clear goal: to move beyond the limitations of generic agencies and create a high-authority advisory hub.",
+    "body2": "We connect international capital with premium investment opportunities, creating value based on deep market analysis and long-term strategic thinking.",
+    "stats": {
+      "founded": "Founded",
+      "portfolio": "Portfolio Value",
+      "languages": "Global Languages",
+      "divisions": "Core Divisions"
+    }
+  },
+  "featuredProperties": {
+    "sectionLabel": "Premium Collection",
+    "headline": "Featured <highlight>Properties</highlight>",
+    "subtitle": "Exclusive access to tier-1 international investments.",
+    "cta": "View All Properties"
+  },
+  "academyCta": {
+    "sectionLabel": "Educational Academy",
+    "headline": "Master the <highlight>Premium</highlight> Market.",
+    "subtitle": "Join our high-performance training for Sales, Negotiations, and Lead Generation in the international real estate corridor.",
+    "viewModules": "View All Modules",
+    "aboutUs": "About AMP Empire"
+  },
+  "aboutPage": {
+    "heroWord1": "AMP",
+    "heroWord2": "Empire",
+    "pillars": {
+      "sectionLabel": "Who We Are",
+      "p1": {
+        "title": "Institutional Foundation",
+        "text": "Founded in Warsaw, Poland, AMP Empire operates as a registered institutional hub bridging capital across European and Middle Eastern markets."
+      },
+      "p2": {
+        "title": "Mission",
+        "text": "To elevate real estate service standards to an unreachable level — moving beyond generic agency limitations to high-authority advisory."
+      },
+      "p3": {
+        "title": "Global Reach",
+        "text": "Operating across multiple international capital corridors, our advisory network spans 6 language markets and premium tier-1 locations."
+      },
+      "p4": {
+        "title": "The Team",
+        "text": "Composed of seasoned advisors, certified brokers, and trained negotiators, our team executes with institutional precision."
+      }
+    },
+    "timeline": {
+      "sectionLabel": "Our Journey",
+      "event1": "AMP Empire founded in Warsaw, Poland",
+      "event2": "Expanded into Middle Eastern real estate corridors",
+      "event3": "Launched Academic Division with international curriculum",
+      "event4": "Portfolio surpasses €2B in managed assets",
+      "event5": "6-language digital platform launched globally"
+    },
+    "legal": {
+      "sectionLabel": "Legal Registry",
+      "company": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+      "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Poland",
+      "registry": "Founded 2018 · NIP: 9541283669 · REGON: 273474870",
+      "cta": "Get in Touch"
+    },
+    "quote": {
+      "author": "AMP Empire — Warsaw HQ"
+    }
+  },
+  "servicesPage": {
+    "heroWord1": "Professional",
+    "heroWord2": "Sectors",
+    "ctas": {
+      "explore": "Explore Sector",
+      "advisory": "View Advisory",
+      "manage": "Manage Assets",
+      "request": "Request Advisory",
+      "exploreLink": "Explore"
+    }
+  },
+  "coursesPage": {
+    "heroWord1": "Expert",
+    "heroWord2": "Training",
+    "heroWord3": "Modules",
+    "highlights": {
+      "h1": "Expert-led sessions",
+      "h2": "Real-world simulations",
+      "h3": "International market focus",
+      "h4": "Flexible online format",
+      "h5": "Multilingual support",
+      "h6": "Certificate upon completion"
+    },
+    "enroll": {
+      "sectionLabel": "Enroll Now",
+      "headline": "Start Your Training Journey",
+      "subtitle": "Join the elite circle of real estate professionals mastering the global capital corridors.",
+      "cta": "Register Interest"
+    }
+  },
+  "contactPage": {
+    "heroSubtitle": "Leading international capital corridors through institutional precision.",
+    "info": {
+      "title": "Institutional Foundation",
+      "legalNameLabel": "Full Legal Name",
+      "hqLabel": "Warsaw Headquarters",
+      "emailLabel": "Direct Inquiries",
+      "phoneLabel": "Phone Line",
+      "nipLabel": "Tax ID (NIP)",
+      "regonLabel": "Registry (REGON)"
+    },
+    "form": {
+      "title": "Lead Capture Form",
+      "subtitle": "Connect with our strategic advisors today.",
+      "successTitle": "Request Received",
+      "successDesc": "An institutional advisor will contact you shortly.",
+      "sendAnother": "Send another request",
+      "labels": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "sector": "Sector Interests",
+        "message": "Message / Inquiry"
+      },
+      "placeholders": {
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "message": "Describe your goals..."
+      },
+      "options": {
+        "realEstate": "Real Estate & Property Management",
+        "consulting": "Strategic Advisory & Consulting",
+        "hospitality": "Hospitality & Lifestyle Assets",
+        "academy": "Educational Academy"
+      },
+      "submit": "Submit Request",
+      "processing": "Processing..."
     }
   }
 }

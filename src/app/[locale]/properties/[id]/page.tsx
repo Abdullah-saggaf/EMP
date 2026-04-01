@@ -107,10 +107,10 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               </div>
               
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-charcoal-400 text-sm font-medium">
-                <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-gold-500/70" /> {property.constructionyear ? `Listed/Built ${property.constructionyear}` : "Recently Listed"}</span>
+                <span className="flex items-center gap-2"><Calendar className="w-4 h-4 text-gold-500/70" /> {property.constructionyear ? t("listedBuilt", { year: property.constructionyear }) : t("recentlyListed")}</span>
                 <div className="h-4 w-px bg-charcoal-700 hidden sm:block"></div>
-                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Save className="w-4 h-4" /> Save</button>
-                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Share2 className="w-4 h-4" /> Share</button>
+                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Save className="w-4 h-4" /> {t("save")}</button>
+                <button className="flex items-center gap-2 hover:text-gold-500 transition-colors"><Share2 className="w-4 h-4" /> {t("share")}</button>
               </div>
             </div>
 
@@ -246,9 +246,9 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center mb-6">
                  <span className="font-heading font-bold text-charcoal-900 text-2xl">AE</span>
               </div>
-              <h3 className="text-xl font-heading font-bold text-cream-100 mb-2">AMP Empire</h3>
+              <h3 className="text-xl font-heading font-bold text-cream-100 mb-2">{t("sidebarTitle")}</h3>
               <p className="text-sm text-charcoal-400 mb-8 border-b border-charcoal-700/50 pb-6">
-                Premium Real Estate Advisory & Investment Corridors. Contact us to learn more about this exclusive property.
+                {t("sidebarDesc")}
               </p>
               
               <div className="flex flex-col gap-4">
@@ -263,7 +263,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                   className="w-full mt-2 flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-heading font-semibold tracking-wide transition-all bg-[#25D366] text-white hover:bg-[#128C7E] shadow-lg shadow-[#25D366]/20 border border-[#25D366]/30"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Contact on WhatsApp
+                  {t("whatsappBtn")}
                 </a>
               </div>
             </div>

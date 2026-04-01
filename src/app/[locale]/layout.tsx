@@ -22,12 +22,6 @@ const outfit = Outfit({
 
 
 
-export const metadata = {
-  title: "AMP Empire — Global Investment Advisory & Premium Real Estate",
-  description:
-    "AMP Empire connects capital with real investment opportunities across European and Middle Eastern markets. Premium real estate advisory, investment consulting, and training courses.",
-};
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }

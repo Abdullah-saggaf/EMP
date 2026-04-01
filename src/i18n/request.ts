@@ -11,5 +11,20 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
+    getMessageFallback({ namespace, key, error }) {
+      const path = [namespace, key].filter((part) => part != null).join(".");
+      if (error.code === "MISSING_MESSAGE") {
+        return path; // renders missing keys gracefully as text
+      }
+      return path;
+    },
+    onError(error) {
+      if (error.code === 'MISSING_MESSAGE') {
+        // Prevent fatal crashes during development for missing keys
+        console.log(`Fallback triggered for: ${error.message}`);
+      } else {
+        console.error(error);
+      }
+    }
   };
 });

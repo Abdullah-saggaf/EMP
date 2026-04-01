@@ -1,14 +1,43 @@
 {
+  "properties": {
+    "client": {
+      "searchPlaceholder": "Buscar por ciudad, país, tipo...",
+      "filterLabel": "Filtrar",
+      "allCountries": "Todos los Países",
+      "allTypes": "Todos los Tipos",
+      "sort": {
+        "newest": "Nuevos",
+        "oldest": "Antiguos",
+        "priceDesc": "Precio: Mayor a Menor",
+        "priceAsc": "Precio: Menor a Mayor"
+      },
+      "clearBtn": "Limpiar",
+      "resultsFound": "{count} propiedades encontradas",
+      "resultFound": "{count} propiedad encontrada",
+      "resultsFor": "Resultados para \"{query}\"",
+      "clearAllFilters": "Limpiar Filtros"
+    },
+    "sectionLabel": "Portafolio Premium",
+    "headline": "Propiedades Exclusivas",
+    "subtitle": "Acceso exclusivo a inversiones de primer nivel a nivel internacional.",
+    "bed": "Hab.",
+    "bath": "Baños",
+    "sqm": "m²",
+    "comingSoon": "Próximamente",
+    "noProperties": "No se encontraron propiedades que coincidan con sus criterios."
+  },
   "nav": {
     "home": "Inicio",
     "about": "Sobre nosotros",
     "services": "Nuestros servicios",
     "properties": "Propiedades",
     "courses": "Cursos",
-    "contact": "CONTACTO",
+    "contact": "Contacto",
     "cta": "Empieza con nosotros"
   },
   "hero": {
+    "badge": "Est. 2018 Sede Varsovia",
+    "portfolioCta": "Ver Portafolio",
     "tagline": "Arquitectos de corredores de capital global",
     "subheadline": "Conectando capital internacional con bienes raíces premium y experiencia.",
     "cta": "Empieza con nosotros",
@@ -17,7 +46,7 @@
   "about": {
     "sectionLabel": "Cimentación Institucional",
     "headline": "AMP Empire, Arquitectos de corredores de capital global",
-    "body": "Fundada en 2018, nuestra misión es elevar los estándares de servicio en bienes raíces a un nivel inalcanzable para otros.",
+    "body": "Fundada en 2018, nuestra misión es elevar los estándares de servicio en bienes raíces a un nivel inalcanzable.",
     "bodyExtended": "Cerramos la brecha entre el capital internacional y las propiedades premium, brindando asesoría y servicios de gestión expertos.",
     "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) es un centro institucional registrado con sede en Varsovia, Polonia.",
     "partnersLabel": "Socios",
@@ -37,19 +66,19 @@
     },
     "consulting": {
       "title": "Asesoría Estratégica y Consultoría",
-      "p1": "Consultoría empresarial: Asesoramiento estratégico sobre operaciones comerciales y optimización.",
-      "p2": "Corredores de Capital: Planificación estratégica para el movimiento internacional de capital."
+      "p1": "Consultoría empresarial: Asesoramiento estratégico sobre operaciones.",
+      "p2": "Corredores de Capital: Planificación estratégica para el movimiento de capital."
     },
     "hospitality": {
       "title": "Hostelería y Activos de Estilo de Vida",
       "p1": "Operaciones de restaurantes: Gestión y consultoría para activos de gastronomía.",
-      "p2": "Servicios de alojamiento: Gestión de estancias de corta duración e instalaciones de hospedaje."
+      "p2": "Servicios de alojamiento: Gestión de estancias de corta duración."
     }
   },
   "courses": {
     "sectionLabel": "Academia Educativa",
     "headline": "Módulos de entrenamiento experto",
-    "subtitle": "Entrenamiento de alto rendimiento para profesionales en el mercado de bienes raíces premium.",
+    "subtitle": "Entrenamiento de alto rendimiento para profesionales en bienes raíces premium.",
     "modules": {
       "sales": {
         "title": "VENTAS",
@@ -81,17 +110,74 @@
       "t2": {
         "name": "Faisal A.",
         "location": "Riad, Arabia Saudita",
-        "text": "Cerró mi primera venta inmediatamente después de completar el módulo de negociaciones."
+        "text": "Cerró mi primera venta após completar el módulo de negociaciones."
       },
       "t3": {
         "name": "Sarah N.",
         "location": "Dublín, Irlanda",
-        "text": "Elogió la pasión de los instructores y el entrenamiento experto en negociaciones."
+        "text": "Elogió la pasión de los instructores y el entrenamiento experto."
       },
       "t4": {
         "name": "Natalia K.",
         "location": "Toronto, Canadá",
         "text": "Ganó la confianza para comenzar como corredora con los primeros contratos."
+      },
+      "t5": {
+        "name": "Oliver T.",
+        "location": "Londres, Reino Unido",
+        "text": "Asesoría de crecimiento estratégico excepcional."
+      },
+      "t6": {
+        "name": "Emma W.",
+        "location": "Dubái, EAU",
+        "text": "Una clase magistral en gestión de activos de élite."
+      },
+      "t7": {
+        "name": "Lukas M.",
+        "location": "Berlín, Alemania",
+        "text": "ROI excepcional en carteras globales."
+      },
+      "t8": {
+        "name": "Sara A.",
+        "location": "Riad, Arabia Saudita",
+        "text": "Transparencia absoluta y servicio premium."
+      },
+      "t9": {
+        "name": "Michal P.",
+        "location": "Varsovia, Polonia",
+        "text": "La Academia redefinió mi carrera en bienes raíces."
+      },
+      "t10": {
+        "name": "Elena R.",
+        "location": "Madrid, España",
+        "text": "Acceso incomparable a propiedades de primer nivel."
+      }
+    }
+  },
+  "homePreview": {
+    "sectionLabel": "Explorar Empire",
+    "headline": "Divisiones de Excelencia",
+    "subtitle": "Arquitectura integral para capital global y asesoría de élite.",
+    "cards": {
+      "about": {
+        "title": "Sobre nosotros",
+        "description": "Nuestro legado, visión y excelencia operativa.",
+        "cta": "Descubrir más"
+      },
+      "properties": {
+        "title": "Portafolio",
+        "description": "Acceso exclusivo a activos premium de alta rentabilidad.",
+        "cta": "Ver Propiedades"
+      },
+      "services": {
+        "title": "Asesoría",
+        "description": "Consultoría estratégica para capital institucional.",
+        "cta": "Nuestros Servicios"
+      },
+      "courses": {
+        "title": "Academia",
+        "description": "Programas educativos de élite para futuros corredores.",
+        "cta": "Comenzar a aprender"
       }
     }
   },
@@ -111,17 +197,177 @@
     "description": "Arquitectos de corredores de capital global. Centro de asesoría de alta autoridad.",
     "legalInfo": "Datos del Registro Legal",
     "copyright": "© 2018 - 2026 AMP EMPIRE",
-    "allRightsReserved": "Todos los derechos reservados"
+    "allRightsReserved": "Todos los derechos reservados",
+    "privacyPolicy": "Política de Privacidad",
+    "quickLinks": "Enlaces Rápidos",
+    "courses": "Academia",
+    "coursesLink": "Curso de Corredor Inmobiliario",
+    "contactInfo": "Información de Contacto"
   },
   "propertyDetails": {
+    "recentlyListed": "Nuevo",
+    "listedBuilt": "Incluido {year}",
+    "save": "Guardar",
+    "share": "Compartir",
+    "sidebarTitle": "AMP Empire",
+    "sidebarDesc": "Asesoramiento Premium. Contáctenos para más detalles.",
+    "whatsappBtn": "Contactar por WhatsApp",
+    "featuresGroups": {
+      "climate": "Clima y Hogar Inteligente",
+      "leisure": "Ocio y Bienestar",
+      "security": "Seguridad y Edificio",
+      "kitchen": "Cocina e Interiores",
+      "outdoor": "Exteriores",
+      "parking": "Estacionamiento",
+      "other": "Otras Características"
+    },
     "back": "Volver a la lista",
+    "overview": "Descripción general",
+    "features": "Características",
+    "location": "Ubicación",
+    "contactAgent": "Contactar al agente",
     "specs": {
       "price": "Precio",
       "size": "Área",
       "bedrooms": "Dormitorios",
       "bathrooms": "Baños",
       "year": "Año",
+      "floor": "Piso",
       "type": "Tipo"
+    }
+  },
+  "mission": {
+    "sectionLabel": "Nuestra Misión desde 2018",
+    "headline": "Elevando los estándares a niveles <highlight>inalcanzables</highlight>.",
+    "body1": "Nuestra historia comenzó en 2018 con un objetivo claro: ir más allá de las limitaciones...",
+    "body2": "Conectamos capital internacional con oportunidades de inversión premium...",
+    "stats": {
+      "founded": "Fundado",
+      "portfolio": "Valor del Portafolio",
+      "languages": "Idiomas",
+      "divisions": "Divisiones Principales"
+    }
+  },
+  "featuredProperties": {
+    "sectionLabel": "Colección Premium",
+    "headline": "<highlight>Propiedades</highlight> Destacadas",
+    "subtitle": "Acceso exclusivo a inversiones internacionales de primer nivel.",
+    "cta": "Ver Todas las Propiedades"
+  },
+  "academyCta": {
+    "sectionLabel": "Academia Educativa",
+    "headline": "Domina el Mercado <highlight>Premium</highlight>.",
+    "subtitle": "Capacitación de alto rendimiento en el mercado inmobiliario.",
+    "viewModules": "Ver Módulos",
+    "aboutUs": "Sobre AMP Empire"
+  },
+  "aboutPage": {
+    "heroWord1": "AMP",
+    "heroWord2": "Empire",
+    "pillars": {
+      "sectionLabel": "Quiénes Somos",
+      "p1": {
+        "title": "Base Institucional",
+        "text": "Fundada en Varsovia, AMP Empire opera como un centro institucional..."
+      },
+      "p2": {
+        "title": "Misión",
+        "text": "Elevar los estándares de servicio inmobiliario..."
+      },
+      "p3": {
+        "title": "Alcance Global",
+        "text": "Operando a través de múltiples corredores de capital..."
+      },
+      "p4": {
+        "title": "El Equipo",
+        "text": "Compuesto por asesores experimentados."
+      }
+    },
+    "timeline": {
+      "sectionLabel": "Nuestro Viaje",
+      "event1": "Fundación en Varsovia",
+      "event2": "Expansión en Medio Oriente",
+      "event3": "Lanzamiento División Académica",
+      "event4": "Valor supera los 2.000 millones de euros",
+      "event5": "Plataforma digital en 6 idiomas"
+    },
+    "legal": {
+      "sectionLabel": "Registro Legal",
+      "company": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+      "address": "ul. Dzielna 11a lok. 28, 01-023 Varsovia, Polonia",
+      "registry": "Fundado en 2018 · NIP: 9541283669 · REGON: 273474870",
+      "cta": "Ponerse en Contacto"
+    },
+    "quote": {
+      "author": "AMP Empire — Sede Varsovia"
+    }
+  },
+  "servicesPage": {
+    "heroWord1": "Sectores",
+    "heroWord2": "Profesionales",
+    "ctas": {
+      "explore": "Explorar",
+      "advisory": "Ver Asesoría",
+      "manage": "Manejar Activos",
+      "request": "Solicitar Asesoría",
+      "exploreLink": "Explorar"
+    }
+  },
+  "coursesPage": {
+    "heroWord1": "Módulos de",
+    "heroWord2": "Formación",
+    "heroWord3": "Avanzada",
+    "highlights": {
+      "h1": "Sesiones de expertos",
+      "h2": "Simulaciones reales",
+      "h3": "Enfoque internacional",
+      "h4": "Formato en línea",
+      "h5": "Soporte multilingüe",
+      "h6": "Certificado final"
+    },
+    "enroll": {
+      "sectionLabel": "Inscríbase Ahora",
+      "headline": "Inicie su Formación",
+      "subtitle": "Únase al círculo élite.",
+      "cta": "Registrar Interés"
+    }
+  },
+  "contactPage": {
+    "heroSubtitle": "Liderando corredores corporativos.",
+    "info": {
+      "title": "Base Institucional",
+      "legalNameLabel": "Nombre Completo",
+      "hqLabel": "Sede Central",
+      "emailLabel": "Consultas",
+      "phoneLabel": "Teléfono",
+      "nipLabel": "NIP",
+      "regonLabel": "REGON"
+    },
+    "form": {
+      "title": "Formulario",
+      "subtitle": "Conéctese con nuestros asesores.",
+      "successTitle": "Solicitud Recibida",
+      "successDesc": "Nos pondremos en contacto con usted brevemente.",
+      "sendAnother": "Enviar otra solicitud",
+      "labels": {
+        "name": "Nombre",
+        "email": "E-mail",
+        "sector": "Sector",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Juana Pérez",
+        "email": "juana@example.com",
+        "message": "Describa sus objetivos..."
+      },
+      "options": {
+        "realEstate": "Inmobiliaria",
+        "consulting": "Asesoramiento",
+        "hospitality": "Hostelería",
+        "academy": "Academia"
+      },
+      "submit": "Enviar",
+      "processing": "Procesando..."
     }
   }
 }

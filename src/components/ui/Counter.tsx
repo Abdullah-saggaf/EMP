@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface CounterProps {
   end: number;
   suffix?: string;
-  label: string;
+  label?: string;
   duration?: number;
+  className?: string;
 }
 
 export default function Counter({
@@ -15,6 +17,7 @@ export default function Counter({
   suffix = "+",
   label,
   duration = 2,
+  className,
 }: CounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -44,6 +47,15 @@ export default function Counter({
     return () => cancelAnimationFrame(animationFrame);
   }, [isInView, end, duration]);
 
+  // If className is passed, render just the number (used in custom layouts like stat strips)
+  if (className) {
+    return (
+      <span ref={ref as any} className={cn(className)}>
+        {count}
+      </span>
+    );
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -53,13 +65,14 @@ export default function Counter({
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="text-center p-6"
     >
-      <div className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gradient-gold mb-2">
-        {count}
-        {suffix}
+      <div className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter mb-2">
+        {count}{suffix}
       </div>
-      <div className="text-sm font-heading font-medium tracking-[0.2em] uppercase text-charcoal-400">
-        {label}
-      </div>
+      {label && (
+        <div className="text-sm font-bold tracking-[0.2em] uppercase text-white/30">
+          {label}
+        </div>
+      )}
     </motion.div>
   );
 }

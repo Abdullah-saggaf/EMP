@@ -1,14 +1,43 @@
 {
+  "properties": {
+    "client": {
+      "searchPlaceholder": "Ara...",
+      "filterLabel": "Filtrele",
+      "allCountries": "Tüm Ülkeler",
+      "allTypes": "Tüm Türler",
+      "sort": {
+        "newest": "En Yeniler",
+        "oldest": "En Eskiler",
+        "priceDesc": "Yüksekten Düşüğe",
+        "priceAsc": "Düşükten Yükseğe"
+      },
+      "clearBtn": "Temizle",
+      "resultsFound": "{count} bulundu",
+      "resultFound": "{count} bulundu",
+      "resultsFor": "\"{query}\" sonuçları",
+      "clearAllFilters": "Filtreleri Temizle"
+    },
+    "sectionLabel": "Premium Portföy",
+    "headline": "Özel Mülkler",
+    "subtitle": "Birinci sınıf uluslararası yatırımlara özel erişim.",
+    "bed": "Yatak Odası",
+    "bath": "Banyo",
+    "sqm": "m²",
+    "comingSoon": "Yakında",
+    "noProperties": "Kriterlerinize uyan mülk bulunamadı."
+  },
   "nav": {
     "home": "Anasayfa",
     "about": "Hakkımızda",
     "services": "Hizmetlerimiz",
     "properties": "Emlak",
     "courses": "Kurslar",
-    "contact": "İLETİŞİM",
+    "contact": "İletişim",
     "cta": "Bizimle başlayın"
   },
   "hero": {
+    "badge": "2018 Kuruldu",
+    "portfolioCta": "Portföyü İncele",
     "tagline": "Küresel Sermaye Koridorlarının Mimarları",
     "subheadline": "Uluslararası sermayeyi seçkin gayrimenkul ve uzmanlıkla buluşturuyoruz.",
     "cta": "Bizimle başlayın",
@@ -37,13 +66,13 @@
     },
     "consulting": {
       "title": "Stratejik Uzmanlık ve Danışmanlık",
-      "p1": "İş Danışmanlığı: İş operasyonları ve optimizasyon hakkında stratejik tavsiyeler.",
+      "p1": "İş Danışmanlığı: İş operasyonları hakkında stratejik tavsiyeler.",
       "p2": "Sermaye Koridorları: Uluslararası sermaye hareketi için stratejik planlama."
     },
     "hospitality": {
       "title": "Ağırlama ve Yaşam Tarzı Varlıkları",
       "p1": "Restoran Operasyonları: Gastronomi varlıkları için yönetim ve danışmanlık.",
-      "p2": "Konaklama Hizmetleri: Kısa süreli konaklamaların ve lojman tesislerinin yönetimi."
+      "p2": "Konaklama Hizmetleri: Kısa süreli konaklamaların yönetimi."
     }
   },
   "courses": {
@@ -76,7 +105,7 @@
       "t1": {
         "name": "Piotr D.",
         "location": "Dubai, BAE",
-        "text": "Kurs, seçkin gayrimenkul profesyonelleri için 'olmazsa olmaz' niteliğindedir."
+        "text": "Kurs, seçkin gayrimenkul profesyonelleri için 'olmazsa olmaz'."
       },
       "t2": {
         "name": "Faisal A.",
@@ -91,7 +120,64 @@
       "t4": {
         "name": "Natalia K.",
         "location": "Toronto, Kanada",
-        "text": "İlk kontratlarla bir broker olarak başlama güvenini kazandı."
+        "text": "İlk sözleşmelerle broker olarak başlama güvenini kazandı."
+      },
+      "t5": {
+        "name": "Oliver T.",
+        "location": "Londra, İngiltere",
+        "text": "Olağanüstü stratejik büyüme danışmanlığı."
+      },
+      "t6": {
+        "name": "Emma W.",
+        "location": "Dubai, BAE",
+        "text": "Elit varlık yönetiminde bir ustalık sınıfı."
+      },
+      "t7": {
+        "name": "Lukas M.",
+        "location": "Berlin, Almanya",
+        "text": "Küresel portföylerde istisnai yatırım getirisi."
+      },
+      "t8": {
+        "name": "Sara A.",
+        "location": "Riyad, KSA",
+        "text": "Mutlak şeffaflık ve premium hizmet."
+      },
+      "t9": {
+        "name": "Michal P.",
+        "location": "Varşova, Polonya",
+        "text": "Akademi gayrimenkul kariyerimi yeniden tanımladı."
+      },
+      "t10": {
+        "name": "Elena R.",
+        "location": "Madrid, İspanya",
+        "text": "Birinci sınıf mülklere benzersiz erişim."
+      }
+    }
+  },
+  "homePreview": {
+    "sectionLabel": "Empire'ı Keşfet",
+    "headline": "Mükemmellik Bölümleri",
+    "subtitle": "Küresel sermaye ve elit danışmanlık için kapsamlı mimari.",
+    "cards": {
+      "about": {
+        "title": "Hakkımızda",
+        "description": "Mirasımız, vizyonumuz ve operasyonel mükemmelliğimiz.",
+        "cta": "Daha Fazla Keşfet"
+      },
+      "properties": {
+        "title": "Portföy",
+        "description": "Yüksek getirili premium varlıklara özel erişim.",
+        "cta": "Mülkleri Gör"
+      },
+      "services": {
+        "title": "Danışmanlık",
+        "description": "Kurumsal sermaye için stratejik danışmanlık.",
+        "cta": "Hizmetlerimiz"
+      },
+      "courses": {
+        "title": "Akademi",
+        "description": "Gelecekteki brokerlar için elit eğitim programları.",
+        "cta": "Öğrenmeye Başla"
       }
     }
   },
@@ -111,17 +197,177 @@
     "description": "Küresel Sermaye Koridorlarının Mimarları. Yüksek otoriteli danışmanlık merkezi.",
     "legalInfo": "Yasal Kayıt Verileri",
     "copyright": "© 2018 - 2026 AMP EMPIRE",
-    "allRightsReserved": "Tüm hakları saklıdır"
+    "allRightsReserved": "Tüm hakları saklıdır",
+    "privacyPolicy": "Gizlilik Politikası",
+    "quickLinks": "Hızlı Bağlantılar",
+    "courses": "Akademi",
+    "coursesLink": "Emlak Komisyoncusu Kursu",
+    "contactInfo": "İletişim Bilgileri"
   },
   "propertyDetails": {
+    "recentlyListed": "Yeni Eklenenler",
+    "listedBuilt": "Eklenme/İnşa {year}",
+    "save": "Kaydet",
+    "share": "Paylaş",
+    "sidebarTitle": "AMP Empire",
+    "sidebarDesc": "Premium Gayrimenkul Danışmanlığı.",
+    "whatsappBtn": "WhatsApp ile İletişim",
+    "featuresGroups": {
+      "climate": "İklim ve Akıllı Ev",
+      "leisure": "Rekreasyon ve Sağlık",
+      "security": "Güvenlik ve Bina",
+      "kitchen": "Mutfak ve İç Tasarım",
+      "outdoor": "Dış Mekan",
+      "parking": "Otopark",
+      "other": "Diğer Özellikler"
+    },
     "back": "Listeye dön",
+    "overview": "Genel Bakış",
+    "features": "Özellikler",
+    "location": "Konum",
+    "contactAgent": "Acenta ile iletişime geçin",
     "specs": {
       "price": "Fiyat",
       "size": "Alan",
       "bedrooms": "Yatak Odası",
       "bathrooms": "Banyo",
       "year": "Yıl",
+      "floor": "Kat",
       "type": "Tür"
+    }
+  },
+  "mission": {
+    "sectionLabel": "2018'den Beri Misyonumuz",
+    "headline": "Gayrimenkul standartlarını <highlight>erişilmez</highlight> seviyelere...",
+    "body1": "Hikayemiz 2018'de net bir hedefle başladı...",
+    "body2": "Derin piyasa analizi temelinde uluslararası sermayeyi birinci sınıf...",
+    "stats": {
+      "founded": "Kuruluş",
+      "portfolio": "Portföy",
+      "languages": "Diller",
+      "divisions": "Ana Bölümler"
+    }
+  },
+  "featuredProperties": {
+    "sectionLabel": "Premium Koleksiyon",
+    "headline": "Öne Çıkan <highlight>Gayrimenkuller</highlight>",
+    "subtitle": "Özel yatırım fırsatları.",
+    "cta": "Tüm Gayrimenkulleri Gör"
+  },
+  "academyCta": {
+    "sectionLabel": "Eğitim Akademisi",
+    "headline": "<highlight>Premium</highlight> Pazarda Ustalaşın.",
+    "subtitle": "Uluslararası gayrimenkul eğitimleri.",
+    "viewModules": "Modülleri İncele",
+    "aboutUs": "Hakkında"
+  },
+  "aboutPage": {
+    "heroWord1": "AMP",
+    "heroWord2": "Empire",
+    "pillars": {
+      "sectionLabel": "Biz Kimiz",
+      "p1": {
+        "title": "Kurumsal Temel",
+        "text": "Polonya'nın Varşova kentinde..."
+      },
+      "p2": {
+        "title": "Misyon",
+        "text": "Uzmanlaşmak..."
+      },
+      "p3": {
+        "title": "Global Erişim",
+        "text": "Merkezimiz 6 dil pazarını kapsamaktadır..."
+      },
+      "p4": {
+        "title": "Takım",
+        "text": "Deneyimli danışmanlardan..."
+      }
+    },
+    "timeline": {
+      "sectionLabel": "Yolculuğumuz",
+      "event1": "AMP Empire kuruldu",
+      "event2": "Genişleme",
+      "event3": "Akademi açıldı",
+      "event4": "Portföy ulaştı",
+      "event5": "6 dilli platform"
+    },
+    "legal": {
+      "sectionLabel": "Yasal Sicil",
+      "company": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+      "address": "Varşova, Polonya",
+      "registry": "NIP: 9541283669",
+      "cta": "İletişime Geç"
+    },
+    "quote": {
+      "author": "AMP Empire"
+    }
+  },
+  "servicesPage": {
+    "heroWord1": "Sektörler",
+    "heroWord2": "Profesyonel",
+    "ctas": {
+      "explore": "Sektörü Keşfet",
+      "advisory": "Danışmanlık",
+      "manage": "Yönetim",
+      "request": "Danışmanlık İste",
+      "exploreLink": "Keşfet"
+    }
+  },
+  "coursesPage": {
+    "heroWord1": "Eğitim",
+    "heroWord2": "Modülleri",
+    "heroWord3": "",
+    "highlights": {
+      "h1": "Uzman rehberliği",
+      "h2": "Gerçek simülasyonlar",
+      "h3": "Uluslararası odak",
+      "h4": "Esnek format",
+      "h5": "Çoklu dil",
+      "h6": "Sertifika"
+    },
+    "enroll": {
+      "sectionLabel": "Kayıt Olun",
+      "headline": "Başlayın",
+      "subtitle": "Elit çevreye katılın.",
+      "cta": "Kayıt Formu"
+    }
+  },
+  "contactPage": {
+    "heroSubtitle": "Uluslararası sermaye koridorlarına liderlik.",
+    "info": {
+      "title": "Kurumsal",
+      "legalNameLabel": "Yasal Adı",
+      "hqLabel": "Ofis",
+      "emailLabel": "İletişim",
+      "phoneLabel": "Telefon",
+      "nipLabel": "NIP",
+      "regonLabel": "REGON"
+    },
+    "form": {
+      "title": "İletişim Formu",
+      "subtitle": "Danışmanlarımızla bağlantı kurun.",
+      "successTitle": "Alındı",
+      "successDesc": "İletişime geçilecektir.",
+      "sendAnother": "Başka form gönder",
+      "labels": {
+        "name": "Adı",
+        "email": "E-posta",
+        "sector": "Sektör",
+        "message": "Mesaj"
+      },
+      "placeholders": {
+        "name": "Ad",
+        "email": "E-posta",
+        "message": "Açıklama"
+      },
+      "options": {
+        "realEstate": "Gayrimenkul",
+        "consulting": "Danışmanlık",
+        "hospitality": "Ağırlama",
+        "academy": "Eğitim"
+      },
+      "submit": "Gönder",
+      "processing": "İşleniyor..."
     }
   }
 }

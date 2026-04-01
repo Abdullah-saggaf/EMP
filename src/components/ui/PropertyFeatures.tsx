@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Dumbbell, Car, Trees, Wind, Utensils, Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface PropertyFeaturesProps {
   features: string[];
 }
 
 export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
+  const t = useTranslations("propertyDetails.featuresGroups");
+
   if (!features || features.length === 0) return null;
 
   // 1. Filter out redundant/unnecessary direction labels and duplicates
@@ -18,37 +21,43 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
   const categories = [
     {
       id: "comfort",
-      title: "Climate & Smart Home",
+      titleKey: "climate",
+      text: t("climate"),
       icon: Wind,
       keywords: ["air conditioning", "smart-home", "underfloor", "heating", "generator", "jacuzzi", "blinds"]
     },
     {
       id: "leisure",
-      title: "Leisure & Wellness",
+      titleKey: "leisure",
+      text: t("leisure"),
       icon: Dumbbell,
       keywords: ["pool", "sauna", "spa", "fitness", "gym", "turkish bath", "social club", "game room", "barbeque", "solarium"]
     },
     {
       id: "security",
-      title: "Building & Security",
+      titleKey: "security",
+      text: t("security"),
       icon: ShieldCheck,
       keywords: ["security", "cctv", "camera", "concierge", "lift", "complex", "wheelchair"]
     },
     {
       id: "kitchen",
-      title: "Kitchen & Interior",
+      titleKey: "kitchen",
+      text: t("kitchen"),
       icon: Utensils,
       keywords: ["kitchen", "white goods", "appliances", "wardrobe", "dressing", "storage", "laundry", "cellar", "en-suite", "satellite"]
     },
     {
       id: "outdoor",
-      title: "Outdoors & Views",
+      titleKey: "outdoor",
+      text: t("outdoor"),
       icon: Trees,
       keywords: ["balcony", "terrace", "garden", "nature", "sea", "view", "forest", "mountain", "beach", "city view", "lake", "airport", "stores", "restaurants", "bus"]
     },
     {
       id: "parking",
-      title: "Parking & Facilities",
+      titleKey: "parking",
+      text: t("parking"),
       icon: Car,
       keywords: ["car", "park", "garage", "ev charge", "metro"]
     }
@@ -63,8 +72,8 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
     let assigned = false;
     for (const cat of categories) {
       if (cat.keywords.some(kw => fLower.includes(kw))) {
-        if (!groupedFeatures[cat.title]) groupedFeatures[cat.title] = [];
-        groupedFeatures[cat.title].push(feature);
+        if (!groupedFeatures[cat.titleKey]) groupedFeatures[cat.titleKey] = [];
+        groupedFeatures[cat.titleKey].push(feature);
         assigned = true;
         break; // Apply to the first matched category
       }
@@ -77,7 +86,7 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
   return (
     <div className="space-y-6">
       {categories.map((cat, groupIdx) => {
-        const items = groupedFeatures[cat.title];
+        const items = groupedFeatures[cat.titleKey];
         if (!items || items.length === 0) return null;
         
         return (
@@ -93,7 +102,7 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
               <div className="w-10 h-10 rounded-xl bg-charcoal-800/80 flex items-center justify-center text-gold-500 border border-charcoal-700/50 shadow-inner">
                 <cat.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-heading font-semibold text-cream-100">{cat.title}</h3>
+              <h3 className="text-xl font-heading font-semibold text-cream-100">{cat.text}</h3>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
@@ -120,7 +129,7 @@ export default function PropertyFeatures({ features }: PropertyFeaturesProps) {
             <div className="w-10 h-10 rounded-xl bg-charcoal-800/80 flex items-center justify-center text-gold-500 border border-charcoal-700/50 shadow-inner">
               <Zap className="w-5 h-5" />
             </div>
-            <h3 className="text-xl font-heading font-semibold text-cream-100">Other Features</h3>
+            <h3 className="text-xl font-heading font-semibold text-cream-100">{t("other")}</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-6">
             {uncategorized.map((item, idx) => (

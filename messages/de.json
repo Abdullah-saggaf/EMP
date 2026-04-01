@@ -1,14 +1,43 @@
 {
+  "properties": {
+    "client": {
+      "searchPlaceholder": "Suchen Sie nach Stadt, Land, Typ oder Name...",
+      "filterLabel": "Filtern",
+      "allCountries": "Alle Länder",
+      "allTypes": "Alle Typen",
+      "sort": {
+        "newest": "Neueste",
+        "oldest": "Älteste",
+        "priceDesc": "Preis: Absteigend",
+        "priceAsc": "Preis: Aufsteigend"
+      },
+      "clearBtn": "Löschen",
+      "resultsFound": "{count} Immobilien gefunden",
+      "resultFound": "{count} Immobilie gefunden",
+      "resultsFor": "Ergebnisse für \"{query}\"",
+      "clearAllFilters": "Alle Filter löschen"
+    },
+    "sectionLabel": "Premium Portfolio",
+    "headline": "Exklusive Immobilien",
+    "subtitle": "Exklusiver Zugang zu erstklassigen internationalen Investitionen.",
+    "bed": "Zimmer",
+    "bath": "Bäder",
+    "sqm": "m²",
+    "comingSoon": "Demnächst",
+    "noProperties": "Keine Immobilien gefunden, die Ihren Kriterien entsprechen."
+  },
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
     "services": "Unsere Leistungen",
     "properties": "Immobilien",
     "courses": "Kurse",
-    "contact": "KONTAKT",
+    "contact": "Kontakt",
     "cta": "Starten Sie mit uns"
   },
   "hero": {
+    "badge": "Gegr. 2018, Globales HQ in Warschau",
+    "portfolioCta": "Portfolio ansehen",
     "tagline": "Architekten globaler Kapital-Korridore",
     "subheadline": "Verbindung von internationalem Kapital mit erstklassigen Immobilien und Expertise.",
     "cta": "Starten Sie mit uns",
@@ -17,8 +46,8 @@
   "about": {
     "sectionLabel": "Institutionelles Fundament",
     "headline": "AMP Empire, Architekten globaler Kapital-Korridore",
-    "body": "Gegründet im Jahr 2018 ist es unsere Mission, die Servicestandards im Immobilienbereich auf ein für andere unerreichbares Niveau zu heben.",
-    "bodyExtended": "Wir schlagen die Brücke zwischen internationalem Kapital und Premium-Immobilien und bieten fachkundige Beratung und Management-Services.",
+    "body": "Gegründet 2018 ist es unsere Mission, die Servicestandards im Immobilienbereich auf ein unerreichbares Niveau zu heben.",
+    "bodyExtended": "Wir schlagen die Brücke zwischen internationalem Kapital und Premium-Immobilien und bieten Beratung und Management-Services.",
     "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) ist ein registrierter institutioneller Hub mit Sitz in Warschau, Polen.",
     "partnersLabel": "Partner",
     "jobsLabel": "Jobs",
@@ -29,7 +58,7 @@
   "services": {
     "sectionLabel": "Professionelle Sektoren",
     "headline": "Leistungssäulen",
-    "subtitle": "Brückenschlag für internationales Kapital durch drei unterschiedliche professionelle Sektoren.",
+    "subtitle": "Brückenschlag für internationales Kapital durch drei professionelle Sektoren.",
     "realEstate": {
       "title": "Immobilien & Liegenschaftsmanagement",
       "p1": "Immobilienvermittlung: Lizenzierte Vermittlung von Wohn- und Gewerbeimmobilien.",
@@ -37,13 +66,13 @@
     },
     "consulting": {
       "title": "Strategische Beratung & Consulting",
-      "p1": "Unternehmensberatung: Strategische Beratung zu Geschäftsabläufen und Optimierung.",
+      "p1": "Unternehmensberatung: Strategische Beratung zu Geschäftsabläufen.",
       "p2": "Kapital-Korridore: Strategische Planung für internationale Kapitalbewegungen."
     },
     "hospitality": {
       "title": "Gastronomie & Lifestyle-Assets",
       "p1": "Restaurantbetrieb: Management und Beratung für Gastronomie-Assets.",
-      "p2": "Unterkunftsservices: Management von Kurzzeitaufenthalten und Beherbergungsbetrieben."
+      "p2": "Unterkunftsservices: Management von Kurzzeitaufenthalten."
     }
   },
   "courses": {
@@ -76,22 +105,79 @@
       "t1": {
         "name": "Piotr D.",
         "location": "Dubai, VAE",
-        "text": "Der Kurs ist ein 'Must-have' für Profis auf dem Premium-Immobilienmarkt."
+        "text": "Der Kurs ist ein 'Must-have' für Premium-Immobilienprofis."
       },
       "t2": {
         "name": "Faisal A.",
         "location": "Riad, Saudi-Arabien",
-        "text": "Schloss meinen ersten Verkauf unmittelbar nach Abschluss des Verhandlungsmoduls ab."
+        "text": "Schloss meinen ersten Verkauf nach dem Verhandlungsmodul ab."
       },
       "t3": {
         "name": "Sarah N.",
         "location": "Dublin, Irland",
-        "text": "Lobte die Leidenschaft der Instruktoren und das Experten-Verhandlungstraining."
+        "text": "Lobte die Leidenschaft der Instruktoren und das Experten-Training."
       },
       "t4": {
         "name": "Natalia K.",
         "location": "Toronto, Kanada",
         "text": "Gewann das Vertrauen, als Maklerin mit ersten Verträgen zu starten."
+      },
+      "t5": {
+        "name": "Oliver T.",
+        "location": "London, UK",
+        "text": "Herausragende strategische Wachstumsberatung."
+      },
+      "t6": {
+        "name": "Emma W.",
+        "location": "Dubai, VAE",
+        "text": "Eine Meisterklasse im Elite-Asset-Management."
+      },
+      "t7": {
+        "name": "Lukas M.",
+        "location": "Berlin, Deutschland",
+        "text": "Außergewöhnlicher ROI bei globalen Portfolios."
+      },
+      "t8": {
+        "name": "Sara A.",
+        "location": "Riad, KSA",
+        "text": "Absolute Transparenz und Premium-Service."
+      },
+      "t9": {
+        "name": "Michal P.",
+        "location": "Warschau, Polen",
+        "text": "Die Akademie hat meine Immobilienkarriere neu definiert."
+      },
+      "t10": {
+        "name": "Elena R.",
+        "location": "Madrid, Spanien",
+        "text": "Unvergleichlicher Zugang zu Tier-1-Immobilien."
+      }
+    }
+  },
+  "homePreview": {
+    "sectionLabel": "Empire erkunden",
+    "headline": "Bereiche der Exzellenz",
+    "subtitle": "Umfassende Architektur für globales Kapital und Elite-Beratung.",
+    "cards": {
+      "about": {
+        "title": "Über uns",
+        "description": "Unser Erbe, unsere Vision und operative Exzellenz.",
+        "cta": "Mehr erfahren"
+      },
+      "properties": {
+        "title": "Portfolio",
+        "description": "Exklusiver Zugang zu erstklassigen Hochrendite-Assets.",
+        "cta": "Immobilien ansehen"
+      },
+      "services": {
+        "title": "Beratung",
+        "description": "Strategische Beratung für institutionelles Kapital.",
+        "cta": "Unsere Leistungen"
+      },
+      "courses": {
+        "title": "Akademie",
+        "description": "Elite-Bildungsprogramme für zukünftige Makler.",
+        "cta": "Jetzt lernen"
       }
     }
   },
@@ -111,17 +197,177 @@
     "description": "Architekten globaler Kapital-Korridore. Hochkarätiges Beratungszentrum.",
     "legalInfo": "Gesetzliche Registerdaten",
     "copyright": "© 2018 - 2026 AMP EMPIRE",
-    "allRightsReserved": "Alle Rechte vorbehalten"
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "quickLinks": "Schnelllinks",
+    "courses": "Akademie",
+    "coursesLink": "Immobilienmakler-Kurs",
+    "contactInfo": "Kontaktinformation"
   },
   "propertyDetails": {
+    "recentlyListed": "Neu gelistet",
+    "listedBuilt": "Gelistet/Gebaut {year}",
+    "save": "Speichern",
+    "share": "Teilen",
+    "sidebarTitle": "AMP Empire",
+    "sidebarDesc": "Premium-Immobilienberatung. Kontaktieren Sie uns für Details.",
+    "whatsappBtn": "Auf WhatsApp kontaktieren",
+    "featuresGroups": {
+      "climate": "Klima & Smart Home",
+      "leisure": "Freizeit & Wellness",
+      "security": "Sicherheit & Gebäude",
+      "kitchen": "Küche & Innenausstattung",
+      "outdoor": "Außenbereich & Aussicht",
+      "parking": "Parken & Einrichtungen",
+      "other": "Sonstige Merkmale"
+    },
     "back": "Zurück zur Liste",
+    "overview": "Überblick",
+    "features": "Ausstattung",
+    "location": "Standort",
+    "contactAgent": "Makler kontaktieren",
     "specs": {
       "price": "Preis",
       "size": "Fläche",
       "bedrooms": "Schlafzimmer",
       "bathrooms": "Badezimmer",
       "year": "Jahr",
+      "floor": "Etage",
       "type": "Typ"
+    }
+  },
+  "mission": {
+    "sectionLabel": "Unsere Mission seit 2018",
+    "headline": "Wir heben Immobilienstandards auf <highlight>unerreichbare</highlight> Niveaus.",
+    "body1": "Unsere Geschichte begann 2018 mit einem klaren Ziel: Die Grenzen herkömmlicher Agenturen zu überschreiten...",
+    "body2": "Wir verbinden internationales Kapital mit erstklassigen Investitionsmöglichkeiten...",
+    "stats": {
+      "founded": "Gegründet",
+      "portfolio": "Portfoliowert",
+      "languages": "Globale Sprachen",
+      "divisions": "Kerndivisionen"
+    }
+  },
+  "featuredProperties": {
+    "sectionLabel": "Premium-Kollektion",
+    "headline": "Ausgewählte <highlight>Immobilien</highlight>",
+    "subtitle": "Exklusiver Zugang zu internationalen erstklassigen Investitionen.",
+    "cta": "Alle Immobilien ansehen"
+  },
+  "academyCta": {
+    "sectionLabel": "Bildungsakademie",
+    "headline": "Meistern Sie den <highlight>Premium-Sektor</highlight>.",
+    "subtitle": "Nehmen Sie an unserem hochleistungsfähigen Training teil.",
+    "viewModules": "Alle Module ansehen",
+    "aboutUs": "Über AMP Empire"
+  },
+  "aboutPage": {
+    "heroWord1": "AMP",
+    "heroWord2": "Empire",
+    "pillars": {
+      "sectionLabel": "Wer wir sind",
+      "p1": {
+        "title": "Institutionelles Fundament",
+        "text": "AMP Empire wurde in Warschau gegründet..."
+      },
+      "p2": {
+        "title": "Mission",
+        "text": "Standards in der Immobilienbranche auf ein unerreichbares Niveau heben..."
+      },
+      "p3": {
+        "title": "Globale Reichweite",
+        "text": "Unser Netzwerk agiert entlang zahlreicher internationaler Kapitalströme..."
+      },
+      "p4": {
+        "title": "Das Team",
+        "text": "Bestehend aus erfahrenen Beratern und Experten."
+      }
+    },
+    "timeline": {
+      "sectionLabel": "Die Meilensteine",
+      "event1": "Gründung von AMP Empire in Warschau",
+      "event2": "Expansion in den Immobilienmarkt",
+      "event3": "Start der akademischen Division",
+      "event4": "Verwaltetes Portfolio überschreitet 2 Mrd. €",
+      "event5": "Digitale Plattform in 6 Sprachen weltweit gelauncht"
+    },
+    "legal": {
+      "sectionLabel": "Rechtsregister",
+      "company": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+      "address": "ul. Dzielna 11a lok. 28, 01-023 Warschau, Polen",
+      "registry": "Gegründet 2018 · NIP: 9541283669 · REGON: 273474870",
+      "cta": "Kontaktieren"
+    },
+    "quote": {
+      "author": "AMP Empire — Warschau HQ"
+    }
+  },
+  "servicesPage": {
+    "heroWord1": "Professionelle",
+    "heroWord2": "Sektoren",
+    "ctas": {
+      "explore": "Sektor Entdecken",
+      "advisory": "Beratung Anzeigen",
+      "manage": "Vermögensverwaltung",
+      "request": "Beratung anfragen",
+      "exploreLink": "Entdecken"
+    }
+  },
+  "coursesPage": {
+    "heroWord1": "Experten",
+    "heroWord2": "Trainings",
+    "heroWord3": "Module",
+    "highlights": {
+      "h1": "Von Experten geleitete Sitzungen",
+      "h2": "Simulationen aus der realen Welt",
+      "h3": "Fokus auf internationale Märkte",
+      "h4": "Flexibles Online-Format",
+      "h5": "Mehrsprachiger Support",
+      "h6": "Zertifikat nach Abschluss"
+    },
+    "enroll": {
+      "sectionLabel": "Jetzt Einschreiben",
+      "headline": "Starten Sie Ihr Training",
+      "subtitle": "Treten Sie dem Elite-Kreis bei.",
+      "cta": "Interesse bekunden"
+    }
+  },
+  "contactPage": {
+    "heroSubtitle": "Führende internationale Kapitalströme durch institutionelle Präzision.",
+    "info": {
+      "title": "Institutionelles Fundament",
+      "legalNameLabel": "Vollständiger Name",
+      "hqLabel": "Zentrale Warschau",
+      "emailLabel": "Direkte Anfragen",
+      "phoneLabel": "Telefon",
+      "nipLabel": "Steuernummer (NIP)",
+      "regonLabel": "Register (REGON)"
+    },
+    "form": {
+      "title": "Anfrage Formular",
+      "subtitle": "Kontaktieren Sie unsere Berater.",
+      "successTitle": "Anfrage erhalten",
+      "successDesc": "Wir werden uns umgehend bei Ihnen melden.",
+      "sendAnother": "Weitere Anfrage senden",
+      "labels": {
+        "name": "Vollständiger Name",
+        "email": "E-Mail-Adresse",
+        "sector": "Sektor",
+        "message": "Nachricht / Anfrage"
+      },
+      "placeholders": {
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "message": "Ziele beschreiben..."
+      },
+      "options": {
+        "realEstate": "Immobilien",
+        "consulting": "Beratung",
+        "hospitality": "Gastgewerbe",
+        "academy": "Akademie"
+      },
+      "submit": "Anfrage Senden",
+      "processing": "Wird bearbeitet..."
     }
   }
 }

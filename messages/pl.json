@@ -1,14 +1,58 @@
 {
+  "properties": {
+    "client": {
+      "searchPlaceholder": "Szukaj po mieście, kraju, typie lub nazwie...",
+      "filterLabel": "Filtruj",
+      "allCountries": "Wszystkie Kraje",
+      "allTypes": "Wszystkie Typy",
+      "sort": {
+        "newest": "Najnowsze",
+        "oldest": "Najstarsze",
+        "priceDesc": "Cena: od najwyższej",
+        "priceAsc": "Cena: od najniższej"
+      },
+      "clearBtn": "Wyczyść",
+      "resultsFound": "Znaleziono {count} nieruchomości",
+      "resultFound": "Znaleziono {count} nieruchomość",
+      "resultsFor": "Wyniki dla \"{query}\"",
+      "clearAllFilters": "Wyczyść Filtry"
+    },
+    "sectionLabel": "Portfolio Premium",
+    "headline": "Ekskluzywne Nieruchomości",
+    "subtitle": "Ekskluzywny dostęp do inwestycji pierwszej klasy.",
+    "bed": "Sypialnie",
+    "bath": "Łazienki",
+    "sqm": "m²",
+    "fallbackTitle": "{type} w {city}",
+    "types": {
+      "apartment": "Apartamenty",
+      "villa": "Willa",
+      "house": "Dom",
+      "townhouse": "Szeregowiec",
+      "penthouse": "Penthouse",
+      "studio": "Studio",
+      "duplex": "Dupleks",
+      "office": "Biuro",
+      "commercial": "Komercyjne",
+      "mansion": "Rezydencja",
+      "land": "Działka",
+      "hotel": "Hotel"
+    },
+    "comingSoon": "Wkrótce",
+    "noProperties": "Nie znaleziono nieruchomości spełniających Twoje kryteria."
+  },
   "nav": {
     "home": "Strona główna",
     "about": "O nas",
     "services": "Nasze usługi",
     "properties": "Nieruchomości",
     "courses": "Kursy",
-    "contact": "KONTAKT",
+    "contact": "Kontakt",
     "cta": "Zacznij z nami"
   },
   "hero": {
+    "badge": "Zał. 2018 Globalna Centrala w Warszawie",
+    "portfolioCta": "Zobacz Portfolio",
     "tagline": "Architekci Globalnych Korytarzy Kapitałowych",
     "subheadline": "Łączymy kapitał międzynarodowy z nieruchomościami premium i wiedzą ekspercką.",
     "cta": "Zacznij z nami",
@@ -18,7 +62,7 @@
     "sectionLabel": "Fundament Instytucjonalny",
     "headline": "AMP Empire, Architekci Globalnych Korytarzy Kapitałowych",
     "body": "Nasza misja rozpoczęła się w 2018 roku z jasno określonym celem: podniesienia standardów obsługi rynku nieruchomości na poziom nieosiągalny dla innych.",
-    "bodyExtended": "Łączymy kapitał z realnymi okazjami inwestycyjnymi na rynkach europejskich i bliskowschodnich, tworząc wartość opartą na doświadczeniu, analizie i długofalowych relacjach.",
+    "bodyExtended": "Łączymy kapitał z realnymi okazjami inwestycyjnymi na rynkach europejskich i bliskowschodnich, tworząc wartość opartą na doświadczeniu i analizie.",
     "history": "AMP EMPIRE (ALEKSANDRA BRZEZIŃSKA) to zarejestrowany hub instytucjonalny z siedzibą w Warszawie.",
     "partnersLabel": "Partnerzy",
     "jobsLabel": "Praca",
@@ -37,8 +81,8 @@
     },
     "consulting": {
       "title": "Doradztwo Strategiczne",
-      "p1": "Doradztwo biznesowe: Strategiczne porady dotyczące operacji biznesowych i optymalizacji.",
-      "p2": "Korytarze Kapitałowe: Strategiczne planowanie międzynarodowego przepływu kapitału."
+      "p1": "Doradztwo biznesowe: Strategiczne porady dotyczące operacji biznesowych.",
+      "p2": "Korytarze Kapitałowe: Strategiczne planowanie przepływu kapitału."
     },
     "hospitality": {
       "title": "Gastronomia i Hospitality",
@@ -92,6 +136,63 @@
         "name": "Natalia K.",
         "location": "Toronto, Kanada",
         "text": "Zyskała pewność siebie, by wystartować jako pośrednik z pierwszymi kontraktami."
+      },
+      "t5": {
+        "name": "Oliver T.",
+        "location": "Londyn, UK",
+        "text": "Wybitne doradztwo w zakresie wzrostu strategicznego."
+      },
+      "t6": {
+        "name": "Emma W.",
+        "location": "Dubaj, ZEA",
+        "text": "Mistrzowskie zarządzanie aktywami najwyższego poziomu."
+      },
+      "t7": {
+        "name": "Lukas M.",
+        "location": "Berlin, Niemcy",
+        "text": "Wyjątkowy zwrot z inwestycji w globalnych portfelach."
+      },
+      "t8": {
+        "name": "Sara A.",
+        "location": "Rijad, KSA",
+        "text": "Absolutna przejrzystość i usługi premium."
+      },
+      "t9": {
+        "name": "Michal P.",
+        "location": "Warszawa, Polska",
+        "text": "Akademia na nowo zdefiniowała moją karierę w nieruchomościach."
+      },
+      "t10": {
+        "name": "Elena R.",
+        "location": "Madryt, Hiszpania",
+        "text": "Niezrównany dostęp do nieruchomości pierwszej klasy."
+      }
+    }
+  },
+  "homePreview": {
+    "sectionLabel": "Odkryj Empire",
+    "headline": "Działy Doskonałości",
+    "subtitle": "Kompleksowa architektura dla globalnego kapitału i elit doradczych.",
+    "cards": {
+      "about": {
+        "title": "O nas",
+        "description": "Nasze dziedzictwo, wizja i doskonałość operacyjna.",
+        "cta": "Dowiedz się więcej"
+      },
+      "properties": {
+        "title": "Portfolio",
+        "description": "Ekskluzywny dostęp do aktywów premium.",
+        "cta": "Zobacz Nieruchomości"
+      },
+      "services": {
+        "title": "Doradztwo",
+        "description": "Konsulting strategiczny dla kapitału instytucjonalnego.",
+        "cta": "Nasze Usługi"
+      },
+      "courses": {
+        "title": "Akademia",
+        "description": "Elitarne programy edukacyjne dla przyszłych pośredników.",
+        "cta": "Zacznij Naukę"
       }
     }
   },
@@ -111,17 +212,270 @@
     "description": "Architekci Globalnych Korytarzy Kapitałowych. Wysokiej klasy centrum doradcze.",
     "legalInfo": "Dane rejestrowe",
     "copyright": "© 2018 - 2026 AMP EMPIRE",
-    "allRightsReserved": "Wszelkie prawa zastrzeżone"
+    "allRightsReserved": "Wszelkie prawa zastrzeżone",
+    "privacyPolicy": "Polityka Prywatności",
+    "quickLinks": "Szybkie Linki",
+    "courses": "Akademia",
+    "coursesLink": "Kurs Pośrednika Nieruchomości",
+    "contactInfo": "Informacje kontaktowe"
   },
   "propertyDetails": {
+    "recentlyListed": "Ostatnio Dodane",
+    "listedBuilt": "Dodano/Zbudowano {year}",
+    "save": "Zapisz",
+    "share": "Udostępnij",
+    "sidebarTitle": "AMP Empire",
+    "sidebarDesc": "Doradztwo Premium i Korytarze Inwestycyjne. Skontaktuj się z nami, aby dowiedzieć się więcej o tej ekskluzywnej ofercie.",
+    "whatsappBtn": "Kontakt przez WhatsApp",
+    "featuresGroups": {
+      "climate": "Klimatyzacja i Smart Home",
+      "leisure": "Relaks i Wellness",
+      "security": "Bezpieczeństwo i Budynek",
+      "kitchen": "Kuchnia i Wnętrze",
+      "outdoor": "Na Zewnątrz i Widoki",
+      "parking": "Parking i Udogodnienia",
+      "other": "Inne Udogodnienia"
+    },
     "back": "Wróć do listy",
+    "overview": "Przegląd",
+    "features": {
+      "air_conditioning": "Klimatyzacja",
+      "airport_0_50_km": "Lotnisko (0-50 km)",
+      "airport_100_km": "Lotnisko (100+ km)",
+      "airport_50_100_km": "Lotnisko (50-100 km)",
+      "apart_kitchen": "Oddzielna kuchnia",
+      "balcony": "Balkon",
+      "barbeque": "Grill",
+      "bars_restaurants": "Bary / restauracje",
+      "basketball_field": "Boisko do koszykowki",
+      "bathtub": "Wanna",
+      "beach_0_500_m": "Plaza (0-500 m)",
+      "beach_1_5_km": "Plaza (1-5 km)",
+      "beach_500_1000_m": "Plaza (500-1000 m)",
+      "beach_front": "Przy plazy",
+      "beautiful_nature_view": "Piekny widok na nature",
+      "blinds": "Rolety",
+      "bosphorus_view": "Widok na Bosfor",
+      "bus_station": "Przystanek autobusowy",
+      "car_park": "Parking",
+      "car_park_closed": "Parking kryty",
+      "caretaker": "Dozorca",
+      "cellar": "Piwnica",
+      "central_heating": "Ogrzewanie centralne",
+      "city_view": "Widok na miasto",
+      "communal_garden": "Wspolny ogrod",
+      "communal_pool": "Wspolny basen",
+      "concierge_service": "Usluga concierge",
+      "dressing_room": "Garderoba",
+      "ev_charge_station": "Stacja ladowania EV",
+      "east": "East",
+      "en_suite_bathroom": "Lazienka en-suite",
+      "fan_coil": "System fan-coil",
+      "fireplace": "Kominek",
+      "fitness": "Fitness",
+      "fitted_wardrobe": "Szafa w zabudowie",
+      "football_field": "Boisko pilkarskie",
+      "forest_view": "Widok na las",
+      "furnished": "Umeblowane",
+      "game_room": "Pokoj gier",
+      "gas_combi": "Piec gazowy",
+      "generator": "Generator",
+      "golf_view": "Widok na pole golfowe",
+      "heat_share_meter": "Podzielnik ciepla",
+      "in_a_complex": "Na osiedlu",
+      "jacuzzi": "Jacuzzi",
+      "kitchen_appliances": "Sprzet kuchenny",
+      "lake_0_1_km": "Jezioro (0-1 km)",
+      "lake_1_5_km": "Jezioro (1-5 km)",
+      "lake_view": "Widok na jezioro",
+      "laundry_room": "Pralnia",
+      "lift": "Winda",
+      "metro": "Metro",
+      "metrobus": "Metrobus",
+      "mountain_view": "Widok na gory",
+      "north": "North",
+      "north_east": "North-East",
+      "north_west": "North-West",
+      "open_plan_kitchen": "Kuchnia otwarta",
+      "playground": "Plac zabaw",
+      "private_garden": "Prywatny ogrod",
+      "private_pool": "Prywatny basen",
+      "rental_management": "Zarzadzanie najmem",
+      "spa": "SPA",
+      "satellite_tv": "Telewizja satelitarna",
+      "sauna": "Sauna",
+      "sea_0_1_km": "Morze (0-1 km)",
+      "sea_1_5_km": "Morze (1-5 km)",
+      "sea_front": "Przy morzu",
+      "sea_view": "Widok na morze",
+      "security_7_24": "Ochrona 24/7",
+      "security_camera": "Monitoring",
+      "shower": "Prysznic",
+      "smart_home_system": "System smart home",
+      "social_club": "Klub osiedlowy",
+      "solar_energy": "Energia sloneczna",
+      "solarium": "Solarium",
+      "south": "South",
+      "south_east": "South-East",
+      "south_west": "South-West",
+      "storage_room": "Pomieszczenie gospodarcze",
+      "stores_shopping_mall": "Sklepy / centrum handlowe",
+      "stove": "Kuchenka",
+      "tennis_court": "Kort tenisowy",
+      "terrace": "Taras",
+      "train_station": "Stacja kolejowa",
+      "turkish_bath": "Laznia turecka",
+      "underfloor_cooling": "Chlodzenie podlogowe",
+      "underfloor_heating": "Ogrzewanie podlogowe",
+      "volleyball_field": "Boisko do siatkowki",
+      "west": "West",
+      "wheelchair_friendly": "Dostosowane dla osob z niepelnosprawnoscia",
+      "white_goods": "AGD"
+    },
+    "location": "Lokalizacja",
+    "contactAgent": "Skontaktuj się z agentem",
     "specs": {
       "price": "Cena",
       "size": "Powierzchnia",
       "bedrooms": "Sypialnie",
       "bathrooms": "Łazienki",
       "year": "Rok",
+      "floor": "Piętro",
       "type": "Typ"
+    }
+  },
+  "mission": {
+    "sectionLabel": "Nasza Misja od 2018",
+    "headline": "Podnosimy standardy nieruchomości do <highlight>nieosiągalnych</highlight> poziomów.",
+    "body1": "Nasza historia rozpoczęła się w 2018 roku od jasnego celu: wyjść poza ograniczenia zwykłych agencji i stworzyć autorytatywne centrum doradztwa.",
+    "body2": "Łączymy kapitał międzynarodowy z inwestycjami premium, tworząc wartość opartą na głębokiej analizie i długoterminowym myśleniu strategicznym.",
+    "stats": {
+      "founded": "Rok Założenia",
+      "portfolio": "Wartość Portfela",
+      "languages": "Języki Globalne",
+      "divisions": "Dywizje Główne"
+    }
+  },
+  "featuredProperties": {
+    "sectionLabel": "Kolekcja Premium",
+    "headline": "Wyróżnione <highlight>Nieruchomości</highlight>",
+    "subtitle": "Ekskluzywny dostęp do międzynarodowych inwestycji najwyższej klasy.",
+    "cta": "Zobacz Wszystkie"
+  },
+  "academyCta": {
+    "sectionLabel": "Akademia Edukacyjna",
+    "headline": "Opanuj Rynek <highlight>Premium</highlight>.",
+    "subtitle": "Dołącz do naszego szkolenia o wysokiej wydajności z zakresu Sprzedaży, Negocjacji i Generowania Leadów w międzynarodowym korytarzu nieruchomości.",
+    "viewModules": "Zobacz Wszystkie Moduły",
+    "aboutUs": "O AMP Empire"
+  },
+  "aboutPage": {
+    "heroWord1": "AMP",
+    "heroWord2": "Empire",
+    "pillars": {
+      "sectionLabel": "Kim Jesteśmy",
+      "p1": {
+        "title": "Fundament Instytucjonalny",
+        "text": "Firma AMP Empire założona w Warszawie pełni funkcję zarejestrowanego ośrodka instytucjonalnego, łączącego kapitał pomiędzy rynkami Europy i Bliskiego Wschodu."
+      },
+      "p2": {
+        "title": "Misja",
+        "text": "Podniesienie standardów usług na rynku nieruchomości do nieosiągalnego poziomu – przechodząc od ograniczeń tradycyjnych agencji do doradztwa o najwyższym autorytecie."
+      },
+      "p3": {
+        "title": "Globalny Zasięg",
+        "text": "Działając w obrębie międzynarodowych korytarzy kapitałowych, nasza sieć doradcza obejmuje 6 rynków językowych oraz najbardziej prestiżowe lokalizacje na świecie."
+      },
+      "p4": {
+        "title": "Zespół",
+        "text": "Złożony z doświadczonych doradców, licencjonowanych pośredników i certyfikowanych negocjatorów, nasz zespół działa z niezwykłą instytucjonalną precyzją."
+      }
+    },
+    "timeline": {
+      "sectionLabel": "Nasza Droga",
+      "event1": "Założenie AMP Empire w Warszawie",
+      "event2": "Ekspansja na rynki nieruchomości Bliskiego Wschodu",
+      "event3": "Uruchomienie Dywizji Akademickiej z międzynarodowym programem",
+      "event4": "Wartość zarządzanego portfela przekracza 2 miliardy EUR",
+      "event5": "Globalne wdrożenie platformy cyfrowej w 6 językach"
+    },
+    "legal": {
+      "sectionLabel": "Rejestr Prawny",
+      "company": "AMP EMPIRE ALEKSANDRA BRZEZIŃSKA",
+      "address": "ul. Dzielna 11a lok. 28, 01-023 Warszawa, Polska",
+      "registry": "Zał. 2018 · NIP: 9541283669 · REGON: 273474870",
+      "cta": "Skontaktuj Się"
+    },
+    "quote": {
+      "author": "AMP Empire — Centrala Warszawa"
+    }
+  },
+  "servicesPage": {
+    "heroWord1": "Sektory",
+    "heroWord2": "Profesjonalne",
+    "ctas": {
+      "explore": "Eksploruj Sektor",
+      "advisory": "Zobacz Doradztwo",
+      "manage": "Zarządzaj Aktywami",
+      "request": "Zapytaj o Doradztwo",
+      "exploreLink": "Eksploruj"
+    }
+  },
+  "coursesPage": {
+    "heroWord1": "Eksperckie",
+    "heroWord2": "Szkolenia",
+    "heroWord3": "Muduły",
+    "highlights": {
+      "h1": "Sesje pod okiem ekspertów",
+      "h2": "Symulacje rzeczywistych sytuacji",
+      "h3": "Skupienie na rynkach dyskrecjonalnych",
+      "h4": "Elastyczny format online",
+      "h5": "Wsparcie wielojęzyczne",
+      "h6": "Certyfikat po ukończeniu"
+    },
+    "enroll": {
+      "sectionLabel": "Zapisz Się",
+      "headline": "Rozpocznij Swoją Przygodę ze Szkoleniach",
+      "subtitle": "Dołącz do elitarnej grupy profesjonalistów na rynku nieruchomości.",
+      "cta": "Zarejestruj Zainteresowanie"
+    }
+  },
+  "contactPage": {
+    "heroSubtitle": "Prowadzimy międzynarodowe korytarze kapitałowe z instytucjonalną precyzją.",
+    "info": {
+      "title": "Fundament Instytucjonalny",
+      "legalNameLabel": "Pełna Nazwa Prawna",
+      "hqLabel": "Centrala Warszawa",
+      "emailLabel": "Zastrzeżenia Bezpośrednie",
+      "phoneLabel": "Linia Telefoniczna",
+      "nipLabel": "NIP",
+      "regonLabel": "REGON"
+    },
+    "form": {
+      "title": "Formularz Kontaktowy",
+      "subtitle": "Porozmawiaj z naszymi doradcami już dziś.",
+      "successTitle": "Zapytanie Otrzymane",
+      "successDesc": "Nasz doradca skontaktuje się z Tobą wkrótce.",
+      "sendAnother": "Wyślij kolejne zapytanie",
+      "labels": {
+        "name": "Imię i Nazwisko",
+        "email": "Adres Email",
+        "sector": "Zainteresowanie Sektorem",
+        "message": "Wiadomość / Zapytanie"
+      },
+      "placeholders": {
+        "name": "Jan Kowalski",
+        "email": "jan@example.com",
+        "message": "Opisz swoje cele..."
+      },
+      "options": {
+        "realEstate": "Nieruchomości i Zarządzanie Aktywami",
+        "consulting": "Doradztwo Strategiczne",
+        "hospitality": "Hotelarze i Aktywa Lifestyle",
+        "academy": "Akademia Edukacyjna"
+      },
+      "submit": "Wyślij Zapytanie",
+      "processing": "Wysyłanie..."
     }
   }
 }

@@ -8,8 +8,12 @@ import { useLocale } from "next-intl";
 import { Locale } from "@/i18n/routing";
 
 const localeLabels: Record<Locale, { label: string; flag: string }> = {
-  pl: { label: "Polski", flag: "🇵🇱" },
   en: { label: "English", flag: "🇬🇧" },
+  ar: { label: "العربية", flag: "🇦🇪" },
+  de: { label: "Deutsch", flag: "🇩🇪" },
+  pl: { label: "Polski", flag: "🇵🇱" },
+  es: { label: "Español", flag: "🇪🇸" },
+  tr: { label: "Türkçe", flag: "🇹🇷" },
 };
 
 export default function LanguageSwitcher() {
@@ -43,16 +47,16 @@ export default function LanguageSwitcher() {
       <motion.button
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-charcoal-800/60 border border-charcoal-700/40 hover:border-gold-500/30 transition-all duration-300 text-sm"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 text-sm"
         aria-label="Select language"
         id="language-switcher"
       >
-        <Globe className="w-4 h-4 text-gold-500" />
-        <span className="text-cream-200 text-xs font-heading">
-          {localeLabels[locale].flag}
+        <Globe className="w-4 h-4 text-primary" />
+        <span className="text-white font-bold flex gap-2 items-center">
+          <span>{localeLabels[locale]?.flag}</span>
         </span>
         <ChevronDown
-          className={`w-3 h-3 text-charcoal-400 transition-transform duration-200 ${
+          className={`w-3 h-3 text-white/50 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -65,7 +69,7 @@ export default function LanguageSwitcher() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full mt-2 end-0 bg-charcoal-800 border border-charcoal-700/50 rounded-xl overflow-hidden shadow-xl shadow-black/20 min-w-[160px] z-50"
+            className="absolute top-full mt-2 end-0 bg-[#0a0a0a] border border-white/10 rounded-xl overflow-hidden shadow-2xl shadow-black min-w-[160px] z-50 backdrop-blur-xl"
           >
             {(Object.entries(localeLabels) as [Locale, typeof localeLabels.en][]).map(
               ([key, { label, flag }]) => (
@@ -74,14 +78,14 @@ export default function LanguageSwitcher() {
                   onClick={() => handleLocaleChange(key)}
                   className={`w-full flex items-center gap-3 px-4 py-3 text-sm transition-all duration-200 ${
                     key === locale
-                      ? "bg-gold-500/10 text-gold-400"
-                      : "text-cream-200 hover:bg-charcoal-700/50 hover:text-gold-400"
+                      ? "bg-primary/10 text-primary"
+                      : "text-white/70 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   <span className="text-base">{flag}</span>
-                  <span className="font-heading font-medium">{label}</span>
+                  <span className="font-bold">{label}</span>
                   {key === locale && (
-                    <span className="ms-auto w-1.5 h-1.5 rounded-full bg-gold-500" />
+                    <span className="ms-auto w-1.5 h-1.5 rounded-full bg-primary" />
                   )}
                 </button>
               )

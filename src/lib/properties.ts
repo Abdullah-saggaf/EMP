@@ -12,7 +12,7 @@ import path from "path";
 
 export async function getProperties(): Promise<Property[]> {
   try {
-    const filePath = path.join(process.cwd(), "property.xml");
+    const filePath = path.join(process.cwd(), "public", "property.xml");
     const xml = await fs.readFile(filePath, "utf-8");
     const data = parser.parse(xml);
 

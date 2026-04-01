@@ -17,6 +17,7 @@ const formSchema = z.object({
 
 export default function ContactPage() {
   const t = useTranslations("contact");
+  const tPage = useTranslations("contactPage");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -44,7 +45,7 @@ export default function ContactPage() {
             {t("headline")}
           </h1>
           <p className="text-white/40 text-xl font-medium leading-relaxed">
-            Leading international capital corridors through institutional precision.
+            {tPage("heroSubtitle")}
           </p>
         </header>
 
@@ -54,14 +55,14 @@ export default function ContactPage() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -mr-32 -mt-32" />
             
             <h2 className="text-3xl font-black text-white tracking-tight mb-12 flex items-center gap-4">
-              Institutional Foundation
+              {tPage("info.title")}
             </h2>
 
             <div className="space-y-10">
               <div className="flex items-start gap-6">
                 <Building2 className="w-8 h-8 text-primary shrink-0" />
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Full Legal Name</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.legalNameLabel")}</p>
                   <p className="text-white text-xl font-bold">{t("legalName")}</p>
                 </div>
               </div>
@@ -69,7 +70,7 @@ export default function ContactPage() {
               <div className="flex items-start gap-6">
                 <MapPin className="w-8 h-8 text-primary shrink-0" />
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Warsaw Headquarters</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.hqLabel")}</p>
                   <p className="text-white text-xl font-bold">{t("address")}</p>
                 </div>
               </div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
               <div className="flex items-start gap-6">
                 <Mail className="w-8 h-8 text-primary shrink-0" />
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Direct Inquiries</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.emailLabel")}</p>
                   <a href={`mailto:${t("email")}`} className="text-white text-xl font-bold hover:text-primary transition-colors">
                     {t("email")}
                   </a>
@@ -87,7 +88,7 @@ export default function ContactPage() {
               <div className="flex items-start gap-6">
                 <Phone className="w-8 h-8 text-primary shrink-0" />
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Phone Line</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.phoneLabel")}</p>
                   <a href={`tel:${t("phone").replace(/\s/g, "")}`} className="text-white text-xl font-bold hover:text-primary transition-colors">
                     {t("phone")}
                   </a>
@@ -96,11 +97,11 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/5">
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Tax ID (NIP)</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.nipLabel")}</p>
                   <p className="text-white font-bold">{t("nip")}</p>
                 </div>
                 <div>
-                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">Registry (REGON)</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-widest mb-1">{tPage("info.regonLabel")}</p>
                   <p className="text-white font-bold">{t("regon")}</p>
                 </div>
               </div>
@@ -110,38 +111,38 @@ export default function ContactPage() {
           {/* Lead Capture Form */}
           <div className="bg-black p-4">
             <div className="mb-12">
-              <h2 className="text-3xl font-black text-white tracking-tight mb-4">Lead Capture Form</h2>
-              <p className="text-white/40 font-medium">Connect with our strategic advisors today.</p>
+              <h2 className="text-3xl font-black text-white tracking-tight mb-4">{tPage("form.title")}</h2>
+              <p className="text-white/40 font-medium">{tPage("form.subtitle")}</p>
             </div>
 
             {isSuccess ? (
               <div className="bg-primary/10 border border-primary/20 p-12 rounded-3xl text-center">
-                <h3 className="text-2xl font-black text-primary mb-4">Request Received</h3>
-                <p className="text-white/60">An institutional advisor will contact you shortly.</p>
+                <h3 className="text-2xl font-black text-primary mb-4">{tPage("form.successTitle")}</h3>
+                <p className="text-white/60">{tPage("form.successDesc")}</p>
                 <button
                   onClick={() => setIsSuccess(false)}
                   className="mt-8 text-primary font-bold uppercase tracking-widest text-xs hover:text-white transition-colors"
                 >
-                  Send another request
+                  {tPage("form.sendAnother")}
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-3">
-                    <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Full Name</label>
+                    <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{tPage("form.labels.name")}</label>
                     <input
                       {...register("name")}
-                      placeholder="Jane Doe"
+                      placeholder={tPage("form.placeholders.name")}
                       className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:border-primary transition-all outline-none"
                     />
                     {errors.name && <span className="text-red-500 text-xs">{errors.name.message}</span>}
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Email Address</label>
+                    <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{tPage("form.labels.email")}</label>
                     <input
                       {...register("email")}
-                      placeholder="jane@example.com"
+                      placeholder={tPage("form.placeholders.email")}
                       className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:border-primary transition-all outline-none"
                     />
                     {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
@@ -149,24 +150,24 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Sector Interests</label>
+                  <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{tPage("form.labels.sector")}</label>
                   <select
                     {...register("sector")}
                     className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:border-primary transition-all outline-none appearance-none"
                   >
-                    <option value="real-estate" className="bg-black">Real Estate & Property Management</option>
-                    <option value="consulting" className="bg-black">Strategic Advisory & Consulting</option>
-                    <option value="hospitality" className="bg-black">Hospitality & Lifestyle Assets</option>
-                    <option value="academy" className="bg-black">Educational Academy</option>
+                    <option value="real-estate" className="bg-black">{tPage("form.options.realEstate")}</option>
+                    <option value="consulting" className="bg-black">{tPage("form.options.consulting")}</option>
+                    <option value="hospitality" className="bg-black">{tPage("form.options.hospitality")}</option>
+                    <option value="academy" className="bg-black">{tPage("form.options.academy")}</option>
                   </select>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Message / Inquiry</label>
+                  <label className="text-white/40 text-[10px] font-bold uppercase tracking-widest">{tPage("form.labels.message")}</label>
                   <textarea
                     {...register("message")}
                     rows={6}
-                    placeholder="Describe your goals..."
+                    placeholder={tPage("form.placeholders.message")}
                     className="bg-white/5 border border-white/10 rounded-3xl px-6 py-4 text-white placeholder:text-white/10 focus:border-primary transition-all outline-none resize-none"
                   />
                   {errors.message && <span className="text-red-500 text-xs">{errors.message.message}</span>}
@@ -174,7 +175,7 @@ export default function ContactPage() {
 
                 <div className="pt-4">
                   <ShinyButton className="w-full">
-                    {isSubmitting ? "Processing..." : "Zacznij z nami"}
+                    {isSubmitting ? tPage("form.processing") : tPage("form.submit")}
                   </ShinyButton>
                 </div>
               </form>

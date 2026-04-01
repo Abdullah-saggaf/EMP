@@ -15,107 +15,95 @@ interface PropertyCardProps {
 export default function PropertyCard({ property, index }: PropertyCardProps) {
   const t = useTranslations("properties");
 
-  const formatPrice = (price: number, currency: string) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: currency || "EUR",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(price);
-  };
-
   return (
-    <Link href={`/properties/${property.slug}` as any} className="block group focus:outline-none">
+    <Link href={`/properties/${property.id}` as any} className="block">
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-        className="relative bg-charcoal-800 rounded-2xl overflow-hidden border border-charcoal-700/50 group-hover:border-gold-500/30 transition-all duration-500 gold-glow-hover block"
+        transition={{ duration: 0.5, delay: (index % 6) * 0.06, ease: "easeOut" }}
+        className="group relative bg-[#0a0a0a] rounded-3xl overflow-hidden border border-white/8 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.2)] hover:-translate-y-1"
       >
-      {/* Image */}
-      <div className="relative h-64 overflow-hidden">
-        {property.images.length > 0 ? (
-          <Image
-            src={property.images[0]}
-            alt={property.title || `${property.type} in ${property.city}`}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-charcoal-700 to-charcoal-800 flex items-center justify-center">
-            <MapPin className="w-12 h-12 text-charcoal-600" />
+        {/* Image Area */}
+        <div className="relative h-56 overflow-hidden">
+          {property.images && property.images.length > 0 ? (
+            <Image
+              src={property.images[0]}
+              alt={property.title || `${property.type} in ${property.city}`}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          ) : (
+            <div className="w-full h-full bg-white/[0.03] flex items-center justify-center">
+              <MapPin className="w-10 h-10 text-white/10" />
+            </div>
+          )}
+
+          {/* Price Badge */}
+          <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-primary/30">
+            <span className="text-primary font-black text-sm tracking-tight">
+              {property.currency} {property.price.toLocaleString()}
+            </span>
           </div>
-        )}
 
-        {/* Price Badge */}
-        <div className="absolute top-4 start-4 bg-charcoal-900/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-gold-500/20">
-          <span className="text-gold-400 font-heading font-bold text-lg">
-            {formatPrice(property.price, property.currency)}
-          </span>
+          {/* Type badge */}
+          <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10">
+            <span className="text-[9px] font-black tracking-[0.2em] uppercase text-white/60">
+              {property.type}
+            </span>
+          </div>
+
+          {/* Bottom overlay */}
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
         </div>
 
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-transparent to-transparent opacity-60" />
-      </div>
+        {/* Content Area */}
+        <div className="p-5">
+          {/* Location Row */}
+          <div className="flex items-center gap-1.5 mb-2">
+            <MapPin className="w-3.5 h-3.5 text-primary/60" />
+            <span className="text-xs font-semibold text-white/40 truncate">
+              {[property.neighborhood, property.city, property.country].filter(Boolean).join(", ")}
+            </span>
+          </div>
 
-      {/* Content */}
-      <div className="p-6">
-        {/* Type & Location */}
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-heading font-semibold tracking-wider uppercase text-gold-500">
-            {property.type}
-          </span>
-          <span className="flex items-center gap-1.5 text-xs text-charcoal-400">
-            <MapPin className="w-3 h-3" />
-            {property.city}
-          </span>
-        </div>
-
-        {/* Title */}
-        {property.title && (
-          <h3 className="font-heading text-lg font-semibold text-cream-100 mb-4 line-clamp-1">
-            {property.title}
+          {/* Title */}
+          <h3 className="font-black text-base text-white tracking-tight mb-4 line-clamp-1 group-hover:text-primary transition-colors duration-300">
+            {property.title || `${property.type} in ${property.city}`}
           </h3>
-        )}
 
-        {/* Divider */}
-        <div className="gold-line mb-4" />
+          {/* Divider */}
+          <div className="w-full h-px bg-white/8 mb-4" />
 
-        {/* Stats */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            {property.bedrooms > 0 && (
-              <div className="flex items-center gap-1.5 text-sm text-charcoal-400">
-                <Bed className="w-4 h-4 text-gold-500/70" />
-                <span>{property.bedrooms} {t("bed")}</span>
-              </div>
-            )}
-            {property.bathrooms > 0 && (
-              <div className="flex items-center gap-1.5 text-sm text-charcoal-400">
-                <Bath className="w-4 h-4 text-gold-500/70" />
-                <span>{property.bathrooms} {t("bath")}</span>
-              </div>
-            )}
-            {property.size > 0 && (
-              <div className="flex items-center gap-1.5 text-sm text-charcoal-400">
-                <Maximize className="w-4 h-4 text-gold-500/70" />
-                <span>{property.size} {t("sqm")}</span>
-              </div>
-            )}
+          {/* Stats + Arrow */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              {property.bedrooms > 0 && (
+                <div className="flex items-center gap-1.5 text-xs text-white/50 font-semibold">
+                  <Bed className="w-3.5 h-3.5 text-primary/60" />
+                  <span>{property.bedrooms}</span>
+                </div>
+              )}
+              {property.bathrooms > 0 && (
+                <div className="flex items-center gap-1.5 text-xs text-white/50 font-semibold">
+                  <Bath className="w-3.5 h-3.5 text-primary/60" />
+                  <span>{property.bathrooms}</span>
+                </div>
+              )}
+              {property.size > 0 && (
+                <div className="flex items-center gap-1.5 text-xs text-white/50 font-semibold">
+                  <Maximize className="w-3.5 h-3.5 text-primary/60" />
+                  <span>{property.size} m²</span>
+                </div>
+              )}
+            </div>
+
+            <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+              <ArrowUpRight className="w-4 h-4 text-primary group-hover:text-black transition-colors" />
+            </div>
           </div>
-
-          {/* View Details */}
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-1 text-gold-500 hover:text-gold-400 transition-colors text-sm font-medium"
-          >
-            <ArrowUpRight className="w-4 h-4" />
-          </motion.div>
         </div>
-      </div>
       </motion.div>
     </Link>
   );

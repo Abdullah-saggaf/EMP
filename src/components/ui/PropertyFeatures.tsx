@@ -177,7 +177,13 @@ type Translator = (key: string) => string;
 
 function localizeFeatureLabel(label: string, tDetails: Translator): string {
   const key = normalizeFeatureKey(label);
-  const candidate = tDetails(`features.${key}`);
+  let candidate = "";
+
+  try {
+    candidate = tDetails(`features.${key}`);
+  } catch {
+    return label;
+  }
 
   // next-intl fallback may return the key path when missing.
   if (!candidate || candidate === `features.${key}` || candidate.includes(`propertyDetails.features.${key}`)) {
